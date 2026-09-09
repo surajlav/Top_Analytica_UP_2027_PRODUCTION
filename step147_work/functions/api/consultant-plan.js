@@ -1,0 +1,7 @@
+import {buildConsultantResearchPlan} from '../lib/consultant-planner.js';
+import {classifyQuery,buildExecutionPlan} from '../lib/vandira-os.js';
+import {resolveEntities} from '../lib/entity-resolver.js';
+const H={'content-type':'application/json; charset=utf-8','cache-control':'no-store',};
+const json=(d,s=200)=>new Response(JSON.stringify(d),{status:s,headers:H});
+export async function onRequestPost({request}){
+ try{const p=await request.json();const query=String(p?.query||'').trim();if(!query)return json({ok:false,error:'query_required'},400);const context=p?.context||{};const route=classifyQuery(query,context);const entities=await resolveEntities(query,context,request);const plan=buildExecutionPlan(route,{...context,ac_no:entities?.primary?.ac_no||context?.ac_no||null});const consultantSteps=['intent_understood','entities_resolved','graph_relationships_checked','evidence_retrieved','conflicts_checked','assessment_prepared','recommendation_prepared','sources_attached','audit_trace_emitted'];const researchPlan=buildConsultantResearchPlan({query,route,entities,context:{...context,ac_no:entities?.primary?.ac_no||context?.ac_no||null}});return json({ok:true,step:'STEP96',role:'A Personal Political Intelligence Consultant',language:p?.language||'hi',query,route,entities,execution_plan:plan,research_plan:researchPlan,consultant_steps:consultantSteps});}catch(e){return json({ok:false,error:String(e?.message||e)},500)}}

@@ -1,0 +1,12 @@
+{
+  "schema_version":"step98.1",
+  "name":"VANDIRA Personal Political Context",
+  "purpose":"Maintain a user-controlled working context so VANDIRA can preserve continuity across questions without guessing personal attributes.",
+  "storage":"local-first browser storage; no server-side persistence in this step",
+  "context_fields":["objective","focus_areas","pinned_entities","working_notes","established_facts","pending_questions","preferences"],
+  "runtime_fields":["selected_ac_no","last_route","last_entity","recent_turns"],
+  "privacy_rules":["profile PII is not included in AI context","do not infer sensitive personal attributes","user must explicitly save persistent consultant notes","canonical election data remains read-only","recent turns are bounded and sanitized"],
+  "continuity_rules":["carry selected constituency only when explicitly selected or resolved","carry established facts as user-provided context, not as authoritative election facts","pending questions inform next research plan","current/latest claims still require fresh evidence","context never overrides primary-source evidence"],
+  "limits":{"focus_areas":12,"working_notes":12,"established_facts":12,"pending_questions":12,"recent_turns":6},
+  "guardrails":["Never treat user notes as verified election facts without source validation","Never use sensitive personal data for political targeting","Never convert 2024 Lok Sabha segment data into 2024 Assembly results","Never persist profile phone/name into consultant AI context"]
+}

@@ -1,0 +1,324 @@
+{
+  "step": "STEP146-DATA-CORRECTION-1",
+  "title": "ECI Source Reconciliation for 2022 Result Records",
+  "scope": "Only 13 ACs previously flagged by the result/margin audit; booth/Form20 data untouched.",
+  "authority": "Election Commission of India detailed results",
+  "source_url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp/NFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e/zVx8fLfn2ReU7TfrqYobgItVaDT1/N9NoActktqO4y0Ti6YTNhJb3duBnsypGrGbsFOwC3iVoQ82MxhlUAMbtgRkU2VvXw6n8RkOkaSlgUgdOo00ndBxGzBsC+0pwZ4d5)",
+  "records_checked": 13,
+  "records_corrected": 13,
+  "correction_policy": "Replace only result identity/vote/margin fields where the official ECI detailed-results record differs; preserve all unrelated fields and booth/Form20 data.",
+  "changes": [
+    {
+      "ac_no": 26,
+      "constituency": "Thakurdwara",
+      "previous": {
+        "winner": "Nawab Jan",
+        "winner_votes": 134391,
+        "runner_up": "Ajay Pratap Singh",
+        "runner_up_votes": 114706,
+        "margin_votes": 19684
+      },
+      "eci_verified": {
+        "winner": "Nawab Jan",
+        "winner_votes": 134391,
+        "runner_up": "Ajay Pratap Singh",
+        "runner_up_votes": 114707,
+        "margin_votes": 19684
+      },
+      "source": {
+        "tier": 1,
+        "publisher": "Election Commission of India",
+        "document": "UP Assembly 2022 Detailed Results",
+        "url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp/NFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e/zVx8fLfn2ReU7TfrqYobgItVaDT1/N9NoActktqO4y0Ti6YTNhJb3duBnsypGrGbsFOwC3iVoQ82MxhlUAMbtgRkU2VvXw6n8RkOkaSlgUgdOo00ndBxGzBsC+0pwZ4d5)"
+      }
+    },
+    {
+      "ac_no": 54,
+      "constituency": "Muradnagar",
+      "previous": {
+        "winner": "Ajit Pal Tyagi",
+        "winner_votes": 169290,
+        "runner_up": "Surendra Kumar",
+        "runner_up_votes": 72195,
+        "margin_votes": 97295
+      },
+      "eci_verified": {
+        "winner": "Ajit Pal Tyagi",
+        "winner_votes": 169290,
+        "runner_up": "Surendra Kumar Munni",
+        "runner_up_votes": 72195,
+        "margin_votes": 97095
+      },
+      "source": {
+        "tier": 1,
+        "publisher": "Election Commission of India",
+        "document": "UP Assembly 2022 Detailed Results",
+        "url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp/NFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e/zVx8fLfn2ReU7TfrqYobgItVaDT1/N9NoActktqO4y0Ti6YTNhJb3duBnsypGrGbsFOwC3iVoQ82MxhlUAMbtgRkU2VvXw6n8RkOkaSlgUgdOo00ndBxGzBsC+0pwZ4d5)"
+      }
+    },
+    {
+      "ac_no": 74,
+      "constituency": "Chharra",
+      "previous": {
+        "winner": "Ravendra Pal Singh",
+        "winner_votes": 110928,
+        "runner_up": "Laxmi Dhangar",
+        "runner_up_votes": 86966,
+        "margin_votes": 24327
+      },
+      "eci_verified": {
+        "winner": "Ravendra Pal Singh",
+        "winner_votes": 111293,
+        "runner_up": "Laxmi Dhangar",
+        "runner_up_votes": 86966,
+        "margin_votes": 24327
+      },
+      "source": {
+        "tier": 1,
+        "publisher": "Election Commission of India",
+        "document": "UP Assembly 2022 Detailed Results",
+        "url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp/NFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e/zVx8fLfn2ReU7TfrqYobgItVaDT1/N9NoActktqO4y0Ti6YTNhJb3duBnsypGrGbsFOwC3iVoQ82MxhlUAMbtgRkU2VvXw6n8RkOkaSlgUgdOo00ndBxGzBsC+0pwZ4d5)"
+      }
+    },
+    {
+      "ac_no": 102,
+      "constituency": "Patiyali",
+      "previous": {
+        "winner": "Nadira Sultan",
+        "winner_votes": 91545,
+        "runner_up": "Mamtesh Shakya",
+        "runner_up_votes": 87957,
+        "margin_votes": 4001
+      },
+      "eci_verified": {
+        "winner": "Nadira Sultan alias Bitiya",
+        "winner_votes": 91958,
+        "runner_up": "Mamtesh Shakya",
+        "runner_up_votes": 87957,
+        "margin_votes": 4001
+      },
+      "source": {
+        "tier": 1,
+        "publisher": "Election Commission of India",
+        "document": "UP Assembly 2022 Detailed Results",
+        "url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp/NFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e/zVx8fLfn2ReU7TfrqYobgItVaDT1/N9NoActktqO4y0Ti6YTNhJb3duBnsypGrGbsFOwC3iVoQ82MxhlUAMbtgRkU2VvXw6n8RkOkaSlgUgdOo00ndBxGzBsC+0pwZ4d5)"
+      }
+    },
+    {
+      "ac_no": 119,
+      "constituency": "Meerganj",
+      "previous": {
+        "winner": "DC Verma",
+        "winner_votes": 116435,
+        "runner_up": "Sultan Baig",
+        "runner_up_votes": 83955,
+        "margin_votes": 32840
+      },
+      "eci_verified": {
+        "winner": "DR. D. C. VERMA",
+        "winner_votes": 116435,
+        "runner_up": "SULTAN BEG",
+        "runner_up_votes": 83955,
+        "margin_votes": 32480
+      },
+      "source": {
+        "tier": 1,
+        "publisher": "Election Commission of India",
+        "document": "UP Assembly 2022 Detailed Results",
+        "url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp/NFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e/zVx8fLfn2ReU7TfrqYobgItVaDT1/N9NoActktqO4y0Ti6YTNhJb3duBnsypGrGbsFOwC3iVoQ82MxhlUAMbtgRkU2VvXw6n8RkOkaSlgUgdOo00ndBxGzBsC+0pwZ4d5)"
+      }
+    },
+    {
+      "ac_no": 181,
+      "constituency": "Salon (SC)",
+      "previous": {
+        "winner": "Ashok Kori",
+        "winner_votes": 87715,
+        "runner_up": "Jagdish Prasad",
+        "runner_up_votes": 85604,
+        "margin_votes": 1511
+      },
+      "eci_verified": {
+        "winner": "ASHOK KUMAR",
+        "winner_votes": 87715,
+        "runner_up": "JAGDISH PRASAD",
+        "runner_up_votes": 85604,
+        "margin_votes": 2111
+      },
+      "source": {
+        "tier": 1,
+        "publisher": "Election Commission of India",
+        "document": "UP Assembly 2022 Detailed Results",
+        "url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp/NFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e/zVx8fLfn2ReU7TfrqYobgItVaDT1/N9NoActktqO4y0Ti6YTNhJb3duBnsypGrGbsFOwC3iVoQ82MxhlUAMbtgRkU2VvXw6n8RkOkaSlgUgdOo00ndBxGzBsC+0pwZ4d5)"
+      }
+    },
+    {
+      "ac_no": 195,
+      "constituency": "Bhojpur",
+      "previous": {
+        "winner": "Nagendra Singh Rathore",
+        "winner_votes": 99979,
+        "runner_up": "Arshad Jamal Siddiqui",
+        "runner_up_votes": 72521,
+        "margin_votes": 27468
+      },
+      "eci_verified": {
+        "winner": "Nagendra Singh Rathour",
+        "winner_votes": 99979,
+        "runner_up": "Arshad Jamal Siddiqui",
+        "runner_up_votes": 72521,
+        "margin_votes": 27458
+      },
+      "source": {
+        "tier": 1,
+        "publisher": "Election Commission of India",
+        "document": "UP Assembly 2022 Detailed Results",
+        "url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp/NFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e/zVx8fLfn2ReU7TfrqYobgItVaDT1/N9NoActktqO4y0Ti6YTNhJb3duBnsypGrGbsFOwC3iVoQ82MxhlUAMbtgRkU2VvXw6n8RkOkaSlgUgdOo00ndBxGzBsC+0pwZ4d5)"
+      }
+    },
+    {
+      "ac_no": 264,
+      "constituency": "Bara (SC)",
+      "previous": {
+        "winner": "Vachaspati",
+        "winner_votes": 89203,
+        "runner_up": "Ajay Munna",
+        "runner_up_votes": 76679,
+        "margin_votes": 12464
+      },
+      "eci_verified": {
+        "winner": "VACHASPATI",
+        "winner_votes": 89203,
+        "runner_up": "AJAY",
+        "runner_up_votes": 76679,
+        "margin_votes": 12524
+      },
+      "source": {
+        "tier": 1,
+        "publisher": "Election Commission of India",
+        "document": "UP Assembly 2022 Detailed Results",
+        "url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp/NFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e/zVx8fLfn2ReU7TfrqYobgItVaDT1/N9NoActktqO4y0Ti6YTNhJb3duBnsypGrGbsFOwC3iVoQ82MxhlUAMbtgRkU2VvXw6n8RkOkaSlgUgdOo00ndBxGzBsC+0pwZ4d5)"
+      }
+    },
+    {
+      "ac_no": 281,
+      "constituency": "Akbarpur",
+      "previous": {
+        "winner": "Ram Achal Rajbhar",
+        "winner_votes": 81391,
+        "runner_up": "Dharmraj Nishad",
+        "runner_up_votes": 69595,
+        "margin_votes": 12336
+      },
+      "eci_verified": {
+        "winner": "RAM ACHAL RAJBHAR",
+        "winner_votes": 81931,
+        "runner_up": "DHARMRAJ NISHAD",
+        "runner_up_votes": 69595,
+        "margin_votes": 12336
+      },
+      "source": {
+        "tier": 1,
+        "publisher": "Election Commission of India",
+        "document": "UP Assembly 2022 Detailed Results",
+        "url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp/NFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e/zVx8fLfn2ReU7TfrqYobgItVaDT1/N9NoActktqO4y0Ti6YTNhJb3duBnsypGrGbsFOwC3iVoQ82MxhlUAMbtgRkU2VvXw6n8RkOkaSlgUgdOo00ndBxGzBsC+0pwZ4d5)"
+      }
+    },
+    {
+      "ac_no": 299,
+      "constituency": "Tarabganj",
+      "previous": {
+        "winner": "Prem Narayan Pandey",
+        "winner_votes": 125325,
+        "runner_up": "Ram Bhajan Chaubey",
+        "runner_up_votes": 71365,
+        "margin_votes": 53690
+      },
+      "eci_verified": {
+        "winner": "PREM NRAYAN PANDEY",
+        "winner_votes": 125325,
+        "runner_up": "RAM BHAJAN CHAUBEY",
+        "runner_up_votes": 71635,
+        "margin_votes": 53690
+      },
+      "source": {
+        "tier": 1,
+        "publisher": "Election Commission of India",
+        "document": "UP Assembly 2022 Detailed Results",
+        "url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp/NFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e/zVx8fLfn2ReU7TfrqYobgItVaDT1/N9NoActktqO4y0Ti6YTNhJb3duBnsypGrGbsFOwC3iVoQ82MxhlUAMbtgRkU2VvXw6n8RkOkaSlgUgdOo00ndBxGzBsC+0pwZ4d5)"
+      }
+    },
+    {
+      "ac_no": 313,
+      "constituency": "Khalilabad",
+      "previous": {
+        "winner": "Ankur Raj Tiwari",
+        "winner_votes": 76086,
+        "runner_up": "Digvijay Narayan",
+        "runner_up_votes": 63464,
+        "margin_votes": 12262
+      },
+      "eci_verified": {
+        "winner": "ANKUR TIWARI",
+        "winner_votes": 76086,
+        "runner_up": "DIGVIJAY NARAYAN",
+        "runner_up_votes": 63464,
+        "margin_votes": 12622
+      },
+      "source": {
+        "tier": 1,
+        "publisher": "Election Commission of India",
+        "document": "UP Assembly 2022 Detailed Results",
+        "url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp/NFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e/zVx8fLfn2ReU7TfrqYobgItVaDT1/N9NoActktqO4y0Ti6YTNhJb3duBnsypGrGbsFOwC3iVoQ82MxhlUAMbtgRkU2VvXw6n8RkOkaSlgUgdOo00ndBxGzBsC+0pwZ4d5)"
+      }
+    },
+    {
+      "ac_no": 316,
+      "constituency": "Nautanwa",
+      "previous": {
+        "winner": "Rishi Tripathi",
+        "winner_votes": 90263,
+        "runner_up": "Kunwar Kaushal Singh",
+        "runner_up_votes": 74392,
+        "margin_votes": 15691
+      },
+      "eci_verified": {
+        "winner": "RISHI TRIPATHI",
+        "winner_votes": 90263,
+        "runner_up": "KUNWAR KAUSHAL SINGH",
+        "runner_up_votes": 74932,
+        "margin_votes": 15331
+      },
+      "source": {
+        "tier": 1,
+        "publisher": "Election Commission of India",
+        "document": "UP Assembly 2022 Detailed Results",
+        "url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp/NFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e/zVx8fLfn2ReU7TfrqYobgItVaDT1/N9NoActktqO4y0Ti6YTNhJb3duBnsypGrGbsFOwC3iVoQ82MxhlUAMbtgRkU2VvXw6n8RkOkaSlgUgdOo00ndBxGzBsC+0pwZ4d5)"
+      }
+    },
+    {
+      "ac_no": 327,
+      "constituency": "Bansgaon (SC)",
+      "previous": {
+        "winner": "Vimlesh Paswan",
+        "winner_votes": 87224,
+        "runner_up": "Sanjay Kumar",
+        "runner_up_votes": 54915,
+        "margin_votes": 32209
+      },
+      "eci_verified": {
+        "winner": "DR. VIMLESH PASWAN",
+        "winner_votes": 87224,
+        "runner_up": "DR. SANJAY KUMAR",
+        "runner_up_votes": 54915,
+        "margin_votes": 32309
+      },
+      "source": {
+        "tier": 1,
+        "publisher": "Election Commission of India",
+        "document": "UP Assembly 2022 Detailed Results",
+        "url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp/NFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e/zVx8fLfn2ReU7TfrqYobgItVaDT1/N9NoActktqO4y0Ti6YTNhJb3duBnsypGrGbsFOwC3iVoQ82MxhlUAMbtgRkU2VvXw6n8RkOkaSlgUgdOo00ndBxGzBsC+0pwZ4d5)"
+      }
+    }
+  ]
+}

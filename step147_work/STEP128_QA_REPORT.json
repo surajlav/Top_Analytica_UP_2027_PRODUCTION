@@ -1,0 +1,15 @@
+{
+  "step": "STEP128",
+  "title": "VANDIRA Evidence Confidence Layer",
+  "json_files_checked": 82,
+  "json_parse_failures": 0,
+  "js_files_checked": 61,
+  "js_syntax_failures": 0,
+  "html_pages_checked": 29,
+  "html_http_failures": 0,
+  "script_tag_mismatches": 0,
+  "canonical_data_changed": false,
+  "canonical_sha256": "195a68687e31981982f32850219907a929ac39d2dbf0a6649a6cf55884bc2944",
+  "zip_integrity": "PASS",
+  "browser_visual_test": "not completed; sandbox Chromium navigation remains administrator-blocked"
+}

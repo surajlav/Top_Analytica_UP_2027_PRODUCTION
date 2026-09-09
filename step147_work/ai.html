@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="TOP Analytica AI Political Intelligence — constituency, election and current political intelligence assistant.">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>VANDIRA | Political Intelligence Engine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/ai-screen.css?v=95">
+<style id="evira-step75-lock">
+:root{
+  --evira-saffron:#c46b18;
+  --evira-saffron-deep:#9f5310;
+  --evira-gold:#a98a61;
+  --evira-ink:#111111;
+  --evira-ivory:#fffdf9;
+}
+/* STEP75 visual lock: Saffron identity */
+.ta-ai-app-name strong{color:var(--evira-saffron)!important;font-weight:900!important}
+.ta-ai-app-name small{color:#7e6d5b!important}
+.ai-command-label span{background:var(--evira-saffron)!important;color:#fff!important;border:0!important;box-shadow:0 6px 14px rgba(196,107,24,.18)!important}
+.ai-command-label b{color:#85786b!important}
+.ai-welcome-block h2{color:var(--evira-ink)!important}
+.ai-welcome-block p{color:#555!important}
+.ai-scope{background:#fff!important;border:1px solid #e3dbd2!important;box-shadow:0 2px 10px rgba(28,22,17,.025)!important}
+.ai-scope strong{color:#111!important;font-size:15px!important;font-weight:800!important}
+.ai-scope span{color:#707070!important;font-size:10.5px!important}
+.ai-scope::after{color:var(--evira-saffron)!important}
+.ai-msg.assistant .mini-avatar,.ai-msg .mini-avatar{background:var(--evira-saffron)!important;color:#fff!important;box-shadow:0 5px 12px rgba(196,107,24,.2)!important}
+.ai-suggest{font-size:11.5px!important;color:#332f2b!important;background:#fff!important;border-color:#ded5cb!important;padding:9px 13px!important}
+.ai-suggest:hover{color:var(--evira-saffron-deep)!important;border-color:#d39b63!important;background:#fff8f0!important}
+.ai-send{background:var(--evira-saffron)!important}
+.ai-context-strip span::first-letter{color:var(--evira-saffron)!important}
+@media(max-width:700px){
+ .ta-ai-app-name strong{font-size:17px!important;color:var(--evira-saffron)!important}
+ .ai-command-label span{font-size:11px!important;padding:7px 11px!important}
+ .ai-command-label b{font-size:8.5px!important;color:#85786b!important}
+ .ai-welcome-block h2{font-size:29px!important;line-height:1.16!important}
+ .ai-welcome-block p{font-size:12px!important;line-height:1.6!important}
+ .ai-scope-grid{gap:8px!important}
+ .ai-scope{min-height:72px!important;padding:11px 12px!important;border-radius:13px!important}
+ .ai-scope strong{font-size:14px!important}
+ .ai-scope span{font-size:9.5px!important}
+ .ai-suggest{font-size:11px!important;padding:9px 12px!important}
+ .ai-msg .mini-avatar{width:30px!important;height:30px!important}
+}
+@media(max-width:430px){
+ .ta-ai-app-name strong{font-size:16px!important}
+ .ai-welcome-block h2{font-size:28px!important}
+ .ai-scope strong{font-size:13.5px!important}
+ .ai-scope span{font-size:9.2px!important}
+ .ai-suggest{font-size:10.5px!important}
+}
+</style>
+<style id="step131-decision-snapshot">
+.ai-decision-snapshot{margin:10px 0 0;padding:10px 12px;border:1px solid #dce6ef;border-radius:13px;background:#fff;display:flex;align-items:center;justify-content:space-between;gap:10px}.ai-decision-copy{min-width:0}.ai-decision-kicker{display:block;font:900 7px/1.2 Poppins,"Noto Sans Devanagari",sans-serif;letter-spacing:.12em;color:#17365f}.ai-decision-title{display:block;margin-top:3px;color:#243d58;font:800 10px/1.3 Poppins,"Noto Sans Devanagari",sans-serif}.ai-decision-sub{display:block;margin-top:3px;color:#718195;font:600 8px/1.35 "Noto Sans Devanagari",Poppins,sans-serif}.ai-decision-actions{display:flex;gap:6px;flex:none}.ai-decision-actions button{border:1px solid #d4e0ea;background:#f8fbfd;color:#17365f;border-radius:8px;padding:7px 9px;font:800 8px/1 Poppins,"Noto Sans Devanagari",sans-serif;cursor:pointer}.ai-decision-actions button:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(18,53,92,.08)}.ai-decision-actions .saved{background:#eefaf5;border-color:#bfe8d6;color:#08734d}
+@media(max-width:600px){.ai-decision-snapshot{align-items:flex-start;flex-direction:column}.ai-decision-actions{width:100%}.ai-decision-actions button{flex:1}}
+</style>
+
+
+<style id="step127-ai-action-rail">
+.ai-answer-actions{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 0;padding-top:9px;border-top:1px solid #e7eef5}
+.ai-answer-actions .ai-action{display:inline-flex;align-items:center;gap:6px;min-height:31px;padding:6px 9px;border:1px solid #d9e4ee;border-radius:9px;background:#fff;color:#17365f;text-decoration:none;font:800 9px/1 Poppins,'Noto Sans Devanagari',sans-serif;transition:.18s ease}
+.ai-answer-actions .ai-action:hover{transform:translateY(-1px);border-color:#b9cddd;box-shadow:0 5px 14px rgba(18,53,92,.07)}
+.ai-answer-actions .ai-action.primary{background:#17365f;color:#fff;border-color:#17365f}
+.ai-answer-actions .ai-action .ai-action-icon{color:#12a56f;font-size:12px}.ai-answer-actions .ai-action.primary .ai-action-icon{color:#72dfb0}
+.ai-answer-actions-label{display:block;width:100%;font:900 7.5px/1.2 Poppins,'Noto Sans Devanagari',sans-serif;letter-spacing:.1em;color:#7b8b9c;text-transform:uppercase;margin-bottom:1px}
+@media(max-width:600px){.ai-answer-actions{gap:5px}.ai-answer-actions .ai-action{flex:1 1 calc(50% - 5px);justify-content:center;font-size:8.5px;min-height:32px;padding:6px 7px}.ai-answer-actions-label{font-size:7px}}
+</style>
+<style id="step126-ai-context">
+.ai-screen{font-family:Poppins,'Noto Sans Devanagari',system-ui,sans-serif}.ai-screen .ai-welcome-block p,.ai-screen .ai-scope span,.ai-screen .ai-disclaimer{font-family:'Noto Sans Devanagari',Poppins,system-ui,sans-serif}.ai-selected-context{margin-top:10px;padding:12px;border:1px solid #d8e4ee;border-radius:14px;background:linear-gradient(145deg,#fff,#f7fbff);box-shadow:0 8px 20px rgba(18,53,92,.045)}.ai-selected-context-top{display:flex;align-items:center;gap:6px;font:900 8px Poppins,sans-serif;letter-spacing:.1em;color:#0d8b5e}.ai-selected-dot{width:6px;height:6px;border-radius:50%;background:#12a56f;box-shadow:0 0 0 4px rgba(18,165,111,.1)}.ai-selected-context strong{display:block;margin-top:7px;color:#17365f;font-size:14px;line-height:1.3}.ai-selected-context small{display:block;margin-top:3px;color:#718096;font:500 9.5px/1.45 'Noto Sans Devanagari',Poppins,sans-serif}.ai-context-link{display:inline-flex;margin-top:9px;color:#1769d8;text-decoration:none;font:800 9px Poppins,'Noto Sans Devanagari',sans-serif}.ai-has-seat .ai-selected-context{border-color:#cfe4d9;background:linear-gradient(145deg,#fff,#f5fbf7)}@media(max-width:760px){.ai-selected-context{padding:10px;margin-top:8px}.ai-selected-context strong{font-size:12px}.ai-selected-context small{font-size:8.5px}.ai-context-link{font-size:8px}}
+</style>
+<style id="step129-recommended-action">
+.ai-recommended-next{margin:12px 0 0;padding:12px;border:1px solid #d9e4ee;border-radius:14px;background:linear-gradient(145deg,#fbfdff,#f7fafc);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center}
+.ai-recommended-kicker{display:block;font:900 7.5px/1.2 Poppins,'Noto Sans Devanagari',sans-serif;letter-spacing:.11em;color:#0d8b5e;text-transform:uppercase;margin-bottom:4px}
+.ai-recommended-copy strong{display:block;color:#17365f;font:800 12px/1.3 Poppins,'Noto Sans Devanagari',sans-serif}.ai-recommended-copy>span:last-child{display:block;margin-top:4px;color:#68798b;font:600 9px/1.45 'Noto Sans Devanagari',Poppins,sans-serif}
+.ai-recommended-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px}.ai-recommended-actions a{display:inline-flex;align-items:center;gap:6px;min-height:30px;padding:6px 9px;border-radius:9px;text-decoration:none;font:800 8.5px/1.1 Poppins,'Noto Sans Devanagari',sans-serif;white-space:nowrap}.ai-recommended-actions a span{font-size:11px}.ai-rec-primary{background:#17365f;color:#fff;border:1px solid #17365f}.ai-rec-primary span{color:#72dfb0}.ai-rec-secondary{background:#fff;color:#17365f;border:1px solid #d5e1eb}.ai-rec-secondary span{color:#12a56f}.ai-recommended-actions a:hover{transform:translateY(-1px);box-shadow:0 5px 14px rgba(18,53,92,.08)}
+@media(max-width:760px){.ai-recommended-next{grid-template-columns:1fr;gap:9px}.ai-recommended-actions{justify-content:stretch}.ai-recommended-actions a{flex:1 1 0;justify-content:center;font-size:8px;white-space:normal;text-align:center}.ai-recommended-copy strong{font-size:11px}.ai-recommended-copy>span:last-child{font-size:8.5px}}
+</style>
+<style id="step128-evidence-layer">
+.ai-evidence-panel{margin:11px 0 0;border:1px solid #e5ddd5;border-radius:14px;background:#fffdfa;overflow:hidden}
+.ai-evidence-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:9px 11px;border-bottom:1px solid #eee6de}
+.ai-evidence-title{font:900 8px/1.2 Poppins,'Noto Sans Devanagari',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#6f6257}
+.ai-evidence-status{font:800 8px/1 Poppins,'Noto Sans Devanagari',sans-serif;padding:5px 7px;border-radius:999px;background:#f4f0ea;color:#6d5c4d}
+.ai-evidence-status.verified{background:#eef8f2;color:#16734d}.ai-evidence-status.current{background:#eef5ff;color:#245f9c}.ai-evidence-status.limited{background:#fff4e8;color:#9a5b12}
+.ai-evidence-body{padding:9px 11px}.ai-evidence-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.ai-evidence-item{min-width:0;padding:8px 9px;border:1px solid #eee7df;border-radius:10px;background:#fff}
+.ai-evidence-k{font:800 7px/1.2 Poppins,'Noto Sans Devanagari',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#9a8b7d;margin-bottom:3px}.ai-evidence-v{font:600 9.5px/1.45 'Noto Sans Devanagari',Poppins,sans-serif;color:#3f3934;word-break:break-word}
+.ai-evidence-sources{margin-top:8px}.ai-evidence-source{display:flex;gap:6px;align-items:flex-start;margin-top:5px;font:600 9px/1.35 'Noto Sans Devanagari',Poppins,sans-serif;color:#4d4945}.ai-evidence-source i{width:5px;height:5px;border-radius:50%;background:#c46b18;flex:0 0 auto;margin-top:4px}.ai-evidence-source a{color:#725128;text-decoration:none}.ai-evidence-source a:hover{text-decoration:underline}.ai-evidence-gap{margin-top:8px;padding:7px 8px;border-radius:9px;background:#fff7ed;color:#85500f;font:600 8.5px/1.4 'Noto Sans Devanagari',Poppins,sans-serif}
+.ai-evidence-foot{padding:7px 11px;border-top:1px solid #eee6de;color:#8a7e72;font:500 7.5px/1.4 'Noto Sans Devanagari',Poppins,sans-serif}
+@media(max-width:600px){.ai-evidence-grid{grid-template-columns:1fr}.ai-evidence-head{padding:8px 9px}.ai-evidence-body{padding:8px 9px}.ai-evidence-v{font-size:9px}.ai-evidence-source{font-size:8.5px}}
+</style>
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#082454"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="format-detection" content="telephone=no"></head>
+<body data-ai-page>
+<header class="ta-ai-appbar" aria-label="VANDIRA workspace header">
+  <a class="ta-ai-app-brand" href="index.html" aria-label="Back to Top Analytica">
+    <span class="ta-ai-app-mark ta-ai-logo-image"><img src="assets/top-analytica-logo.jpg" alt="TOP Analytica logo"></span>
+    <span class="ta-ai-app-name"><strong>VANDIRA</strong><small>POLITICAL INTELLIGENCE ENGINE</small></span>
+  </a>
+  <div class="ta-ai-app-center"><span class="ta-ai-app-title">VANDIRA · Political Intelligence Engine</span><span class="ta-ai-app-dot"><i></i> AI READY</span></div>
+  <div class="ta-ai-app-actions">
+    <button class="evira-new-btn" id="evira-new-chat" type="button" aria-label="New chat" title="New chat"><span class="evira-pencil-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4.2 19.8 5.1 15l10.8-10.8a2.1 2.1 0 0 1 3 0l.9.9a2.1 2.1 0 0 1 0 3L9 18.9l-4.8.9Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="m14.5 5.6 3.9 3.9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><path d="m4.2 19.8 1.1-4.8 3.7 3.7-4.8 1.1Z" fill="currentColor"/></svg></span></button>
+    <button class="evira-more-btn" id="evira-more-open" type="button" aria-label="More options" aria-expanded="false">⋮</button>
+    <div class="evira-more-menu" id="evira-more-menu" aria-hidden="true">
+      <div class="evira-more-section"><span class="evira-more-label" data-ui="language">भाषा</span><strong id="evira-language-current">Auto · हिंदी</strong></div>
+      <button class="evira-menu-item" id="evira-history-menu" type="button"><span>◷</span><span data-ui="history">चैट हिस्ट्री</span></button>
+      <button class="evira-menu-item" id="evira-profile-menu" type="button"><span>◉</span><span data-ui="profile">मेरा प्रोफ़ाइल</span></button>
+      <button class="evira-menu-item" id="evira-context-menu" type="button"><span>⌁</span><span data-ui="consultantContext">Consultant Context</span></button>
+      <a class="evira-menu-item" href="dashboard.html"><span>◉</span><span data-ui="dashboard">Live Dashboard</span></a>
+      <a class="evira-menu-item" href="briefing.html"><span>▣</span><span data-ui="dailyBriefing">Daily Briefing</span></a>
+      <a class="evira-menu-item" href="monitoring.html"><span>◌</span><span data-ui="monitoring">Proactive Monitoring</span></a>
+      <a class="evira-menu-item" href="candidate.html"><span>◈</span><span data-ui="candidate360">Candidate 360</span></a>
+      <a class="evira-menu-item" href="party.html"><span>◈</span><span>Party & Alliance Intelligence</span></a><a href="research.html">Research & Survey</a><a class="evira-menu-item" href="scenario.html"><span>◇</span><span>Scenario & Decision Support</span></a><a class="evira-menu-item" href="campaign.html"><span>▣</span><span>Campaign Planning Workspace</span></a><a class="evira-menu-item" href="content-studio.html"><span>✦</span><span>Communication / Content Studio</span></a><a class="evira-menu-item" href="situation-room.html"><span>◉</span><span>Political Situation Room</span></a><a class="evira-menu-item" href="executive-briefing.html"><span>▣</span><span>Executive / Leadership Briefing</span></a><a class="evira-menu-item" href="hierarchy.html"><span>⌘</span><span>State → Region → District → Assembly → Booth</span></a><a class="evira-menu-item" href="war-room.html"><span>◉</span><span>Political War Room</span></a><a class="evira-menu-item" href="monitoring-performance.html"><span>◌</span><span>Monitoring + Performance Intelligence</span></a><a class="evira-menu-item" href="election-day.html"><span>◉</span><span>Election-Day Intelligence</span></a><a class="evira-menu-item" href="security.html"><span>◈</span><span>Audit / Compliance / Security</span></a>
+      <a class="evira-menu-item" href="competitive.html"><span>◇</span><span>Competitive Intelligence</span></a>
+      <a class="evira-menu-item" href="constituency360.html"><span>◎</span><span>Constituency 360</span></a>
+      <div class="evira-language-grid" role="menu" aria-label="Choose language">
+        <button type="button" data-ai-lang="auto" role="menuitem">Auto</button>
+        <button type="button" data-ai-lang="hi" role="menuitem">हिंदी</button>
+        <button type="button" data-ai-lang="en" role="menuitem">English</button>
+        <button type="button" data-ai-lang="mr" role="menuitem">मराठी</button>
+        <button type="button" data-ai-lang="te" role="menuitem">తెలుగు</button>
+        <button type="button" data-ai-lang="ta" role="menuitem">தமிழ்</button>
+        <button type="button" data-ai-lang="bn" role="menuitem">বাংলা</button>
+        <button type="button" data-ai-lang="gu" role="menuitem">ગુજરાતી</button>
+        <button type="button" data-ai-lang="kn" role="menuitem">ಕನ್ನಡ</button>
+        <button type="button" data-ai-lang="ml" role="menuitem">മലയാളം</button>
+        <button type="button" data-ai-lang="pa" role="menuitem">ਪੰਜਾਬੀ</button>
+        <button type="button" data-ai-lang="or" role="menuitem">ଓଡ଼ିଆ</button>
+        <button type="button" data-ai-lang="as" role="menuitem">অসমীয়া</button>
+      </div>
+      <div class="evira-more-divider"></div>
+      <a class="evira-more-home" href="index.html"><span>⌂</span><span data-ui="home">Home</span></a>
+    </div>
+  </div>
+</header>
+<div class="evira-history-backdrop" id="evira-history-backdrop"></div>
+<aside class="evira-history" id="evira-history" aria-label="Chat history" aria-hidden="true">
+  <div class="evira-history-head"><div><strong>Chat History</strong><small>Previous VANDIRA conversations</small></div><button id="evira-history-close" type="button" aria-label="Close history">×</button></div>
+  <button class="evira-history-new" id="evira-history-new" type="button">＋ New conversation</button>
+  <div class="evira-history-list" id="evira-history-list"></div>
+</aside>
+
+<div class="evira-profile-backdrop" id="evira-profile-backdrop"></div>
+<section class="evira-profile-modal" id="evira-profile-modal" aria-hidden="true" aria-labelledby="evira-profile-title">
+  <div class="evira-profile-head">
+    <div><span class="evira-profile-kicker">VANDIRA</span><h2 id="evira-profile-title">अपना प्रोफ़ाइल बनाएं</h2><p>छोटी-सी जानकारी दें ताकि VANDIRA आपको बेहतर तरीके से संबोधित कर सके।</p></div>
+    <button id="evira-profile-close" type="button" aria-label="Close profile">×</button>
+  </div>
+  <form id="evira-profile-form">
+    <label>आपका नाम<input id="evira-profile-name" name="name" type="text" autocomplete="name" placeholder="जैसे: सुरज" required></label>
+    <label>मोबाइल नंबर<input id="evira-profile-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10 अंकों का मोबाइल नंबर" maxlength="10" pattern="[0-9]{10}" required></label>
+    <label>आपकी भूमिका<select id="evira-profile-role" name="role" required><option value="">भूमिका चुनें…</option><option>उम्मीदवार</option><option>चुनाव अभियान टीम</option><option>पार्टी पदाधिकारी</option><option>राजनीतिक सलाहकार</option><option>संगठन / कार्यकर्ता</option><option>मीडिया / पत्रकार</option><option>शोधकर्ता</option><option>अन्य</option></select></label>
+    <label class="evira-profile-consent"><input id="evira-profile-consent" type="checkbox"> <span>मैं चाहता/चाहती हूँ कि TOP ANALYTICA इस नंबर पर मुझसे संपर्क कर सके।</span></label>
+    <button class="evira-profile-save" type="submit">प्रोफ़ाइल बनाएं</button>
+    <small class="evira-profile-note">यह प्रोफ़ाइल अभी इसी डिवाइस पर सुरक्षित रखी जाएगी। OTP / multi-device login बाद के चरण में जोड़ा जा सकता है।</small>
+  </form>
+</section>
+
+<main class="ai-screen">
+<div class="ai-shell">
+<aside class="ai-side">
+  <div class="ai-side-context-label" data-i18n="seatTitle">SELECT CONSTITUENCY</div>
+  <select id="ai-seat-select" class="ai-seat-select" aria-label="Select constituency"><option value="">Select a constituency…</option></select>
+  <div class="ai-selected-context" id="ai-selected-context" aria-live="polite"><div class="ai-selected-context-top"><span class="ai-selected-dot"></span><span>ACTIVE INTELLIGENCE CONTEXT</span></div><strong id="ai-selected-seat">पूरी UP राजनीति</strong><small id="ai-selected-meta">विधानसभा चुनने पर seat-specific context यहाँ दिखेगा.</small><a id="ai-selected-open" href="constituency.html" class="ai-context-link">Constituency Intelligence →</a></div>
+</aside>
+
+<section class="ai-main" aria-label="AI Political Intelligence Chat">
+<div id="ai-conversation" class="ai-conversation">
+  <div class="ai-welcome-block">
+    <div class="ai-command-label"><span>VANDIRA</span><b data-i18n="copilot">POLITICAL INTELLIGENCE ENGINE</b></div>
+    <h2 data-i18n="welcomeTitle">What do you want to know?</h2>
+    <p data-i18n="welcomeText">सामान्य भाषेत विचारा. विधानसभा-संबंधी प्रश्नांसाठी सत्यापित निवडणूक डेटा आणि वर्तमान राजकीय प्रश्नांसाठी AI Worker उपलब्ध असल्यास live research वापरले जाईल.</p>
+    <div class="ai-context-strip"><span>● <b>Verified Data</b></span><span>● <b>2022 Assembly</b></span><span>● <b>2024 Segment</b></span><span>● <b>Booth Intelligence</b></span></div><div class="ai-scope-grid">
+      <button class="ai-scope" data-scope="seat" data-q="What is the political position of this constituency?" data-q-hi="इस विधानसभा की राजनीतिक स्थिति क्या है?"><strong data-i18n="scopeSeat">Seat Intelligence</strong><span data-i18n="scopeSeatSub">2022 baseline, margin, winner & opposition</span></button>
+      <button class="ai-scope" data-scope="booth" data-q="What does the booth data show about my party's strength?" data-q-hi="बूथ डेटा से मेरी पार्टी की ताकत क्या दिखती है?"><strong data-i18n="scopeBooth">Booth Intelligence</strong><span data-i18n="scopeBoothSub">First 35 verified Form20 booths</span></button>
+      <button class="ai-scope" data-scope="history" data-q="What changed between 2022 and 2024?" data-q-hi="2022 और 2024 में क्या बदलाव दिखता है?"><strong data-i18n="scopeHistory">Election Movement</strong><span data-i18n="scopeHistorySub">Assembly baseline + 2024 segment context</span></button>
+      <button class="ai-scope" data-scope="live" data-q="What are the latest political developments relevant to this constituency?" data-q-hi="इस विधानसभा से जुड़ी ताज़ा राजनीतिक घटनाएँ क्या हैं?"><strong data-i18n="scopeLive">Current Politics</strong><span data-i18n="scopeLiveSub">Current news, leaders, government & police</span></button>
+    </div>
+  </div>
+  <div id="ai-thread" class="ai-thread"></div>
+</div>
+
+<div class="vandira-integration-strip" id="vandira-integration-strip" aria-live="polite"><span class="vandira-integration-dot"></span><span>VANDIRA AI runtime: checking integration…</span></div>
+<div class="ai-composer-wrap">
+  <div class="ai-suggests" id="ai-suggests">
+    <button class="ai-suggest" data-suggest="0" data-q="Who won this constituency in 2022?" data-q-hi="2022 में इस विधानसभा से कौन जीता था?">Who won this constituency in 2022?</button>
+    <button class="ai-suggest" data-suggest="1" data-q="What is the winning margin and turnout?" data-q-hi="जीत का अंतर और मतदान प्रतिशत कितना था?">Margin & turnout</button>
+    <button class="ai-suggest" data-suggest="2" data-q="What does the booth data show?" data-q-hi="बूथ डेटा क्या बताता है?">Booth strength</button>
+    <button class="ai-suggest" data-suggest="3" data-q="Who is the current Chief Minister of Uttar Pradesh?" data-q-hi="उत्तर प्रदेश के वर्तमान मुख्यमंत्री कौन हैं?">Current CM</button>
+    <button class="ai-suggest" data-suggest="4" data-q="What are the latest political developments in Uttar Pradesh?" data-q-hi="उत्तर प्रदेश में अभी कौन-से प्रमुख राजनीतिक घटनाक्रम चल रहे हैं?">Latest politics</button>
+  </div>
+  <div class="ai-composer"><textarea id="ai-input" rows="1" placeholder="Ask anything about your constituency or UP politics…" aria-label="Ask AI"></textarea><button class="ai-voice-stop" id="vandira-tts-stop" type="button" data-vandira-tts="stop" aria-label="Stop voice output" title="Stop voice output">■</button><button class="ai-send" id="ai-send" aria-label="Send">↑</button></div>
+  <div class="ai-composer-foot"><div class="ai-disclaimer" data-i18n="disclaimer">Verified election data is separated from live/current web information. Missing facts are identified instead of invented.</div><span class="ai-powered">VANDIRA · Political Intelligence Engine</span></div>
+</div>
+</section>
+</div>
+</main>
+
+<section class="vandira-context-modal" id="vandira-context-modal" aria-hidden="true" aria-labelledby="vandira-context-title">
+  <div class="vandira-context-backdrop" id="vandira-context-backdrop"></div>
+  <div class="vandira-context-panel" role="dialog" aria-modal="true">
+    <div class="vandira-context-head"><div><span class="vandira-context-eyebrow">VANDIRA</span><h2 id="vandira-context-title">Consultant Context</h2><p>आपके द्वारा चुना गया working context. यह local device पर रहता है.</p></div><button type="button" id="vandira-context-close" aria-label="Close">×</button></div>
+    <form id="vandira-context-form">
+      <label>मुख्य उद्देश्य<input id="vc-objective" maxlength="600" placeholder="उदा. इस सीट की verified competitive picture समझना"></label>
+      <label>Focus areas<textarea id="vc-focus" rows="2" placeholder="एक-एक लाइन में"></textarea></label>
+      <label>Working notes<textarea id="vc-notes" rows="3" placeholder="वे बातें जिन्हें आप VANDIRA को याद रखना चाहते हैं"></textarea></label>
+      <label>Established facts<textarea id="vc-facts" rows="3" placeholder="आपके द्वारा explicitly established facts"></textarea></label>
+      <label>Pending questions<textarea id="vc-pending" rows="2" placeholder="अभी किन सवालों पर वापस आना है"></textarea></label>
+      <label>उत्तर की गहराई<select id="vc-depth"><option value="concise">Concise</option><option value="standard">Standard</option><option value="deep">Deep</option></select></label>
+      <div class="vandira-context-note">⚠️ VANDIRA profile में saved नाम/फोन जैसी जानकारी को consultant AI context में नहीं भेजा जाता। Sensitive personal attributes infer नहीं किए जाते.</div>
+      <div class="vandira-context-actions"><button type="button" class="secondary" id="vandira-context-clear">Clear</button><button type="submit" class="primary">Save Context</button></div>
+    </form>
+  </div>
+</section>
+<script src="assets/app.js"></script><script src="assets/language-ui.js"></script><script src="assets/content-intelligence-context.js?v=85"></script><script src="assets/vandira-personal-context.js?v=98"></script><script src="assets/ai-copilot.js?v=98"></script><script src="assets/vandira-voice-input.js?v=117"></script><script src="assets/vandira-voice-output.js?v=118"></script><script src="assets/vandira-two-way-voice.js?v=119"></script><script src="assets/vandira-ai-integration.js?v=120"></script>
+<script>
+(function(){
+  const $=s=>document.querySelector(s), qs=new URLSearchParams(location.search); let ac=Number(qs.get('ac')||localStorage.getItem('taAiAC')||0)||null, party=qs.get('party')||''; let ctx={};
+  const LANG_NAMES={auto:'Auto',en:'English',hi:'हिंदी',mr:'मराठी',te:'తెలుగు',ta:'தமிழ்',bn:'বাংলা',gu:'ગુજરાતી',kn:'ಕನ್ನಡ',ml:'മലയാളം',pa:'ਪੰਜਾਬੀ',or:'ଓଡ଼ିଆ',as:'অসমীয়া'};
+  const T={
+    en:{seatTitle:'SELECT CONSTITUENCY',welcomeTitle:'What do you want to know?',welcomeText:'Ask naturally. VANDIRA uses verified constituency data for seat questions and live web sources for current political questions when the AI Worker is connected.',copilot:'POLITICAL INTELLIGENCE ENGINE',scopeSeat:'Seat Intelligence',scopeSeatSub:'2022 baseline, margin, winner & opposition',scopeBooth:'Booth Intelligence',scopeBoothSub:'Verified Form 20 booth signals',scopeHistory:'Election Movement',scopeHistorySub:'Assembly baseline + 2024 segment context',scopeLive:'Current Politics',scopeLiveSub:'Current news, leaders, government & law & order',disclaimer:'Verified election data is separated from live/current web information. Missing facts are identified instead of invented.',placeholder:'Ask anything about your constituency or UP politics…',suggests:[['Who won this constituency in 2022?','Who won this constituency in 2022?'],['What is the winning margin and turnout?','Margin & turnout'],['What does the booth data show?','Booth strength'],['Who is the current Chief Minister of Uttar Pradesh?','Current CM'],['What are the latest political developments in Uttar Pradesh?','Latest politics']]},
+    hi:{seatTitle:'विधानसभा चुनें',welcomeTitle:'आप क्या जानना चाहते हैं?',welcomeText:'सामान्य भाषा में पूछें। विधानसभा संबंधी सवालों में सत्यापित डेटा और वर्तमान राजनीतिक सवालों में AI Worker उपलब्ध होने पर live web research का उपयोग किया जाएगा।',copilot:'पॉलिटिकल इंटेलिजेंस कोपायलट',scopeSeat:'सीट इंटेलिजेंस',scopeSeatSub:'2022 बेसलाइन, जीत का अंतर, विजेता और निकटतम प्रतिद्वंद्वी',scopeBooth:'बूथ इंटेलिजेंस',scopeBoothSub:'सत्यापित Form 20 बूथ संकेत',scopeHistory:'चुनावी बदलाव और रुझान',scopeHistorySub:'विधानसभा बेसलाइन + 2024 लोकसभा सेगमेंट संदर्भ',scopeLive:'वर्तमान राजनीतिक परिदृश्य',scopeLiveSub:'ताज़ा खबरें, प्रमुख नेता, सरकार और कानून-व्यवस्था',disclaimer:'सत्यापित चुनावी डेटा और वर्तमान वेब जानकारी अलग रखी जाती है। अनुपलब्ध तथ्यों का अनुमान लगाकर उत्तर नहीं बनाया जाता।',placeholder:'अपनी विधानसभा या उत्तर प्रदेश की राजनीति के बारे में पूछें…',suggests:[['2022 में इस विधानसभा से कौन जीता था?','2022 विजेता'],['जीत का अंतर और मतदान कितना था?','मार्जिन और मतदान'],['बूथ डेटा क्या बताता है?','बूथ स्ट्रेंथ'],['उत्तर प्रदेश के वर्तमान मुख्यमंत्री कौन हैं?','वर्तमान CM'],['उत्तर प्रदेश में अभी कौन-से प्रमुख राजनीतिक घटनाक्रम चल रहे हैं?','ताज़ा राजनीति']]},
+    mr:{seatTitle:'विधानसभा निवडा',welcomeTitle:'तुम्हाला काय जाणून घ्यायचे आहे?',welcomeText:'नैसर्गिक भाषेत विचारा. मतदारसंघाच्या प्रश्नांसाठी सत्यापित निवडणूक डेटा आणि चालू राजकीय प्रश्नांसाठी AI Worker उपलब्ध असल्यास live web research वापरले जाईल.',copilot:'पॉलिटिकल इंटेलिजन्स कोपायलट',scopeSeat:'मतदारसंघ इंटेलिजन्स',scopeSeatSub:'2022 बेसलाइन, मताधिक्य, विजेता आणि प्रतिस्पर्धी',scopeBooth:'बूथ इंटेलिजन्स',scopeBoothSub:'सत्यापित Form 20 बूथ संकेत',scopeHistory:'निवडणूक बदल आणि कल',scopeHistorySub:'विधानसभा बेसलाइन + 2024 लोकसभा सेगमेंट',scopeLive:'सध्याचे राजकीय परिदृश्य',scopeLiveSub:'ताज्या घडामोडी, नेते, सरकार आणि कायदा-सुव्यवस्था',disclaimer:'सत्यापित निवडणूक डेटा आणि वर्तमान वेब माहिती वेगळी ठेवली जाते. उपलब्ध नसलेली माहिती गृहीत धरली जात नाही.',placeholder:'तुमच्या विधानसभा किंवा उत्तर प्रदेशच्या राजकारणाबद्दल विचारा…',suggests:[['2022 मध्ये या मतदारसंघातून कोण जिंकले?','2022 विजेता'],['विजयाचे मताधिक्य आणि मतदान किती?','मताधिक्य आणि मतदान'],['बूथ डेटा काय सांगतो?','बूथ स्ट्रेंथ'],['उत्तर प्रदेशचे सध्याचे मुख्यमंत्री कोण?','सध्याचे CM'],['उत्तर प्रदेशातील ताज्या राजकीय घडामोडी कोणत्या?','ताज्या घडामोडी']]},
+    te:{seatTitle:'నియోజకవర్గాన్ని ఎంచుకోండి',welcomeTitle:'మీరు ఏమి తెలుసుకోవాలనుకుంటున్నారు?',welcomeText:'సహజమైన భాషలో అడగండి. నియోజకవర్గ ప్రశ్నలకు ధృవీకరించిన ఎన్నికల డేటా, ప్రస్తుత రాజకీయ ప్రశ్నలకు AI Worker అందుబాటులో ఉంటే live web research ఉపయోగించబడుతుంది.',copilot:'పొలిటికల్ ఇంటెలిజెన్స్ కోపైలట్',scopeSeat:'సీట్ ఇంటెలిజెన్స్',scopeSeatSub:'2022 బేస్‌లైన్, మెజారిటీ, విజేత & ప్రత్యర్థి',scopeBooth:'బూత్ ఇంటెలిజెన్స్',scopeBoothSub:'ధృవీకరించిన Form 20 బూత్ సంకేతాలు',scopeHistory:'ఎన్నికల మార్పు & ధోరణి',scopeHistorySub:'అసెంబ్లీ బేస్‌లైన్ + 2024 సెగ్మెంట్',scopeLive:'ప్రస్తుత రాజకీయ పరిస్థితి',scopeLiveSub:'తాజా వార్తలు, నేతలు, ప్రభుత్వం & శాంతిభద్రతలు',disclaimer:'ధృవీకరించిన ఎన్నికల డేటా మరియు ప్రస్తుత వెబ్ సమాచారం వేరుగా ఉంచబడతాయి. లేని విషయాలను ఊహించి చెప్పదు.',placeholder:'మీ నియోజకవర్గం లేదా ఉత్తరప్రదేశ్ రాజకీయాల గురించి అడగండి…',suggests:[['2022లో ఈ నియోజకవర్గాన్ని ఎవరు గెలిచారు?','2022 విజేత'],['విజయ మెజారిటీ మరియు పోలింగ్ ఎంత?','మెజారిటీ & పోలింగ్'],['బూత్ డేటా ఏమి చెబుతోంది?','బూత్ బలం'],['ఉత్తరప్రదేశ్ ప్రస్తుత ముఖ్యమంత్రి ఎవరు?','ప్రస్తుత CM'],['ఉత్తరప్రదేశ్‌లో తాజా రాజకీయ పరిణామాలు ఏమిటి?','తాజా రాజకీయాలు']]},
+    ta:{seatTitle:'தொகுதியைத் தேர்ந்தெடுக்கவும்',welcomeTitle:'நீங்கள் என்ன தெரிந்துகொள்ள விரும்புகிறீர்கள்?',welcomeText:'இயல்பான மொழியில் கேளுங்கள். தொகுதி கேள்விகளுக்கு சரிபார்க்கப்பட்ட தேர்தல் தரவும், தற்போதைய அரசியல் கேள்விகளுக்கு AI Worker இருந்தால் live web research-மும் பயன்படுத்தப்படும்.',copilot:'POLITICAL INTELLIGENCE ENGINE',scopeSeat:'தொகுதி நுண்ணறிவு',scopeSeatSub:'2022 அடிப்படை, வாக்கு வித்தியாசம், வெற்றி & எதிரணி',scopeBooth:'வாக்குச்சாவடி நுண்ணறிவு',scopeBoothSub:'சரிபார்க்கப்பட்ட Form 20 தகவல்கள்',scopeHistory:'தேர்தல் மாற்றம் & போக்கு',scopeHistorySub:'சட்டமன்ற அடிப்படை + 2024 பகுதி',scopeLive:'தற்போதைய அரசியல்',scopeLiveSub:'சமீபத்திய செய்திகள், தலைவர்கள், அரசு & சட்டம்-ஒழுங்கு',disclaimer:'சரிபார்க்கப்பட்ட தேர்தல் தரவும் தற்போதைய இணைய தகவலும் தனித்தனியாக வைக்கப்படும். கிடைக்காத தகவல்கள் ஊகிக்கப்படாது.',placeholder:'உங்கள் தொகுதி அல்லது உத்தரப் பிரதேச அரசியல் பற்றி கேளுங்கள்…',suggests:[['2022ல் இந்த தொகுதியில் யார் வென்றார்?','2022 வெற்றியாளர்'],['வெற்றி வித்தியாசம் மற்றும் வாக்குப்பதிவு எவ்வளவு?','வித்தியாசம் & வாக்குப்பதிவு'],['வாக்குச்சாவடி தரவு என்ன சொல்கிறது?','வாக்குச்சாவடி வலிமை'],['உத்தரப் பிரதேசத்தின் தற்போதைய முதல்வர் யார்?','தற்போதைய CM'],['உத்தரப் பிரதேசத்தில் சமீபத்திய அரசியல் நிகழ்வுகள் என்ன?','சமீபத்திய அரசியல்']]},
+    bn:{seatTitle:'বিধানসভা নির্বাচন করুন',welcomeTitle:'আপনি কী জানতে চান?',welcomeText:'স্বাভাবিক ভাষায় প্রশ্ন করুন। আসন-সংক্রান্ত প্রশ্নে যাচাইকৃত নির্বাচনী তথ্য এবং বর্তমান রাজনৈতিক প্রশ্নে AI Worker থাকলে live web research ব্যবহার করা হবে.',copilot:'POLITICAL INTELLIGENCE ENGINE',scopeSeat:'আসন ইন্টেলিজেন্স',scopeSeatSub:'2022 বেসলাইন, ব্যবধান, বিজয়ী ও প্রতিদ্বন্দ্বী',scopeBooth:'বুথ ইন্টেলিজেন্স',scopeBoothSub:'যাচাইকৃত Form 20 বুথ সংকেত',scopeHistory:'নির্বাচনী পরিবর্তন ও প্রবণতা',scopeHistorySub:'অ্যাসেম্বলি বেসলাইন + 2024 সেগমেন্ট',scopeLive:'বর্তমান রাজনৈতিক পরিস্থিতি',scopeLiveSub:'সাম্প্রতিক খবর, নেতা, সরকার ও আইনশৃঙ্খলা',disclaimer:'যাচাইকৃত নির্বাচনী তথ্য এবং বর্তমান ওয়েব তথ্য আলাদা রাখা হয়। অনুপস্থিত তথ্য অনুমান করে বলা হয় না.',placeholder:'আপনার বিধানসভা বা উত্তরপ্রদেশের রাজনীতি সম্পর্কে জিজ্ঞাসা করুন…',suggests:[['2022 সালে এই আসনে কে জিতেছিলেন?','2022 বিজয়ী'],['জয়ের ব্যবধান ও ভোটদান কত?','ব্যবধান ও ভোটদান'],['বুথ ডেটা কী বলছে?','বুথ শক্তি'],['উত্তরপ্রদেশের বর্তমান মুখ্যমন্ত্রী কে?','বর্তমান CM'],['উত্তরপ্রদেশে সাম্প্রতিক রাজনৈতিক ঘটনাগুলি কী?','সাম্প্রতিক রাজনীতি']]}
+  };
+  Object.assign(T,{
+    gu:{...T.en,seatTitle:'વિધાનસભા પસંદ કરો',welcomeTitle:'તમે શું જાણવા માંગો છો?',welcomeText:'સ્વાભાવિક ભાષામાં પૂછો. વિધાનસભા પ્રશ્નો માટે ચકાસાયેલ ચૂંટણી ડેટા અને વર્તમાન રાજકીય પ્રશ્નો માટે AI Worker ઉપલબ્ધ હોય ત્યારે live web research વપરાશે.',copilot:'પોલિટિકલ ઇન્ટેલિજન્સ કોપાઇલટ',scopeSeat:'સીટ ઇન્ટેલિજન્સ',scopeSeatSub:'2022 બેઝલાઇન, માર્જિન, વિજેતા અને વિરોધી',scopeBooth:'બૂથ ઇન્ટેલિજન્સ',scopeBoothSub:'ચકાસાયેલ Form 20 બૂથ સંકેતો',scopeHistory:'ચૂંટણી ફેરફાર અને વલણ',scopeHistorySub:'વિધાનસભા બેઝલાઇન + 2024 સેગમેન્ટ',scopeLive:'વર્તમાન રાજકીય પરિસ્થિતિ',scopeLiveSub:'તાજા સમાચાર, નેતાઓ, સરકાર અને કાયદો-વ્યવસ્થા',disclaimer:'ચકાસાયેલ ચૂંટણી ડેટા અને વર્તમાન વેબ માહિતી અલગ રાખવામાં આવે છે. ઉપલબ્ધ ન હોય તે માહિતી અનુમાનથી કહેવામાં આવતી નથી.',placeholder:'તમારી વિધાનસભા અથવા ઉત્તર પ્રદેશની રાજનીતિ વિશે પૂછો…'},
+    kn:{...T.en,seatTitle:'ವಿಧಾನಸಭೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ',welcomeTitle:'ನೀವು ಏನು ತಿಳಿದುಕೊಳ್ಳಲು ಬಯಸುತ್ತೀರಿ?',welcomeText:'ಸಹಜ ಭಾಷೆಯಲ್ಲಿ ಕೇಳಿ. ಕ್ಷೇತ್ರದ ಪ್ರಶ್ನೆಗಳಿಗೆ ಪರಿಶೀಲಿತ ಚುನಾವಣಾ ಡೇಟಾ ಮತ್ತು ಪ್ರಸ್ತುತ ರಾಜಕೀಯ ಪ್ರಶ್ನೆಗಳಿಗೆ AI Worker ಇದ್ದರೆ live web research ಬಳಸಲಾಗುತ್ತದೆ.',copilot:'ಪಾಲಿಟಿಕಲ್ ಇಂಟೆಲಿಜೆನ್ಸ್ ಕೋಪೈಲಟ್',scopeSeat:'ಕ್ಷೇತ್ರ ಇಂಟೆಲಿಜೆನ್ಸ್',scopeSeatSub:'2022 ಮೂಲ, ಅಂತರ, ವಿಜೇತ ಮತ್ತು ಪ್ರತಿಸ್ಪರ್ಧಿ',scopeBooth:'ಬೂತ್ ಇಂಟೆಲಿಜೆನ್ಸ್',scopeBoothSub:'ಪರಿಶೀಲಿತ Form 20 ಬೂತ್ ಸಂಕೇತಗಳು',scopeHistory:'ಚುನಾವಣಾ ಬದಲಾವಣೆ ಮತ್ತು ಪ್ರವೃತ್ತಿ',scopeHistorySub:'ವಿಧಾನಸಭೆ ಮೂಲ + 2024 ಸೆಗ್ಮೆಂಟ್',scopeLive:'ಪ್ರಸ್ತುತ ರಾಜಕೀಯ ಪರಿಸ್ಥಿತಿ',scopeLiveSub:'ಇತ್ತೀಚಿನ ಸುದ್ದಿ, ನಾಯಕರು, ಸರ್ಕಾರ ಮತ್ತು ಕಾನೂನು-ಸುವ್ಯವಸ್ಥೆ',disclaimer:'ಪರಿಶೀಲಿತ ಚುನಾವಣಾ ಡೇಟಾ ಮತ್ತು ಪ್ರಸ್ತುತ ವೆಬ್ ಮಾಹಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಇರಿಸಲಾಗುತ್ತದೆ. ಲಭ್ಯವಿಲ್ಲದ ಮಾಹಿತಿಯನ್ನು ಊಹಿಸಲಾಗುವುದಿಲ್ಲ.',placeholder:'ನಿಮ್ಮ ಕ್ಷೇತ್ರ ಅಥವಾ ಉತ್ತರ ಪ್ರದೇಶದ ರಾಜಕೀಯದ ಬಗ್ಗೆ ಕೇಳಿ…'},
+    ml:{...T.en,seatTitle:'നിയമസഭ തിരഞ്ഞെടുക്കുക',welcomeTitle:'നിങ്ങൾ എന്താണ് അറിയാൻ ആഗ്രഹിക്കുന്നത്?',welcomeText:'സ്വാഭാവിക ഭാഷയിൽ ചോദിക്കൂ. മണ്ഡല ചോദ്യങ്ങൾക്ക് പരിശോധിച്ച തിരഞ്ഞെടുപ്പ് ഡാറ്റയും നിലവിലെ രാഷ്ട്രീയ ചോദ്യങ്ങൾക്ക് AI Worker ലഭ്യമെങ്കിൽ live web research-ഉം ഉപയോഗിക്കും.',copilot:'POLITICAL INTELLIGENCE ENGINE',scopeSeat:'സീറ്റ് ഇന്റലിജൻസ്',scopeSeatSub:'2022 അടിസ്ഥാന ഡാറ്റ, ഭൂരിപക്ഷം, വിജയി & എതിരാളി',scopeBooth:'ബൂത്ത് ഇന്റലിജൻസ്',scopeBoothSub:'പരിശോധിച്ച Form 20 ബൂത്ത് സൂചനകൾ',scopeHistory:'തിരഞ്ഞെടുപ്പ് മാറ്റവും പ്രവണതയും',scopeHistorySub:'നിയമസഭ അടിസ്ഥാന ഡാറ്റ + 2024 സെഗ്മെന്റ്',scopeLive:'നിലവിലെ രാഷ്ട്രീയ സാഹചര്യം',scopeLiveSub:'പുതിയ വാർത്തകൾ, നേതാക്കൾ, സർക്കാർ & നിയമ-ക്രമം',disclaimer:'പരിശോധിച്ച തിരഞ്ഞെടുപ്പ് ഡാറ്റയും നിലവിലെ വെബ് വിവരങ്ങളും വേർതിരിച്ചാണ് സൂക്ഷിക്കുന്നത്. ലഭ്യമല്ലാത്ത വിവരങ്ങൾ അനുമാനിക്കില്ല.',placeholder:'നിങ്ങളുടെ മണ്ഡലത്തെക്കുറിച്ചോ ഉത്തരപ്രദേശ് രാഷ്ട്രീയത്തെക്കുറിച്ചോ ചോദിക്കൂ…'},
+    pa:{...T.en,seatTitle:'ਵਿਧਾਨ ਸਭਾ ਚੁਣੋ',welcomeTitle:'ਤੁਸੀਂ ਕੀ ਜਾਣਨਾ ਚਾਹੁੰਦੇ ਹੋ?',welcomeText:'ਕੁਦਰਤੀ ਭਾਸ਼ਾ ਵਿੱਚ ਪੁੱਛੋ। ਹਲਕੇ ਦੇ ਸਵਾਲਾਂ ਲਈ ਪ੍ਰਮਾਣਿਤ ਚੋਣ ਡੇਟਾ ਅਤੇ ਮੌਜੂਦਾ ਰਾਜਨੀਤਿਕ ਸਵਾਲਾਂ ਲਈ AI Worker ਉਪਲਬਧ ਹੋਣ ਤੇ live web research ਵਰਤੀ ਜਾਵੇਗੀ।',copilot:'ਪਾਲਿਟਿਕਲ ਇੰਟੈਲੀਜੈਂਸ ਕੋਪਾਇਲਟ',scopeSeat:'ਸੀਟ ਇੰਟੈਲੀਜੈਂਸ',scopeSeatSub:'2022 ਬੇਸਲਾਈਨ, ਫਰਕ, ਜੇਤੂ ਅਤੇ ਵਿਰੋਧੀ',scopeBooth:'ਬੂਥ ਇੰਟੈਲੀਜੈਂਸ',scopeBoothSub:'ਪ੍ਰਮਾਣਿਤ Form 20 ਬੂਥ ਸੰਕੇਤ',scopeHistory:'ਚੋਣ ਬਦਲਾਅ ਅਤੇ ਰੁਝਾਨ',scopeHistorySub:'ਵਿਧਾਨ ਸਭਾ ਬੇਸਲਾਈਨ + 2024 ਸੈਗਮੈਂਟ',scopeLive:'ਮੌਜੂਦਾ ਰਾਜਨੀਤਿਕ ਸਥਿਤੀ',scopeLiveSub:'ਤਾਜ਼ਾ ਖ਼ਬਰਾਂ, ਆਗੂ, ਸਰਕਾਰ ਅਤੇ ਕਾਨੂੰਨ-ਵਿਵਸਥਾ',disclaimer:'ਪ੍ਰਮਾਣਿਤ ਚੋਣ ਡੇਟਾ ਅਤੇ ਮੌਜੂਦਾ ਵੈੱਬ ਜਾਣਕਾਰੀ ਵੱਖ ਰੱਖੀ ਜਾਂਦੀ ਹੈ। ਗੈਰ-ਉਪਲਬਧ ਤੱਥਾਂ ਦਾ ਅਨੁਮਾਨ ਨਹੀਂ ਲਾਇਆ ਜਾਂਦਾ।',placeholder:'ਆਪਣੇ ਹਲਕੇ ਜਾਂ ਉੱਤਰ ਪ੍ਰਦੇਸ਼ ਦੀ ਰਾਜਨੀਤੀ ਬਾਰੇ ਪੁੱਛੋ…'},
+    or:{...T.en,seatTitle:'ବିଧାନସଭା ବାଛନ୍ତୁ',welcomeTitle:'ଆପଣ କଣ ଜାଣିବାକୁ ଚାହୁଁଛନ୍ତି?',welcomeText:'ସ୍ୱାଭାବିକ ଭାଷାରେ ପଚାରନ୍ତୁ। ବିଧାନସଭା ପ୍ରଶ୍ନ ପାଇଁ ଯାଞ୍ଚିତ ନିର୍ବାଚନ ତଥ୍ୟ ଏବଂ ବର୍ତ୍ତମାନ ରାଜନୈତିକ ପ୍ରଶ୍ନ ପାଇଁ AI Worker ଥିଲେ live web research ବ୍ୟବହାର ହେବ.',copilot:'ପଲିଟିକାଲ୍ ଇଣ୍ଟେଲିଜେନ୍ସ କୋପାଇଲଟ୍',scopeSeat:'ସିଟ୍ ଇଣ୍ଟେଲିଜେନ୍ସ',scopeSeatSub:'2022 ବେସଲାଇନ୍, ମାର୍ଜିନ୍, ବିଜେତା ଓ ପ୍ରତିଦ୍ୱନ୍ଦ୍ୱୀ',scopeBooth:'ବୁଥ୍ ଇଣ୍ଟେଲିଜେନ୍ସ',scopeBoothSub:'ଯାଞ୍ଚିତ Form 20 ବୁଥ୍ ସଙ୍କେତ',scopeHistory:'ନିର୍ବାଚନ ପରିବର୍ତ୍ତନ ଓ ପ୍ରବଣତା',scopeHistorySub:'ବିଧାନସଭା ବେସଲାଇନ୍ + 2024 ସେଗମେଣ୍ଟ',scopeLive:'ବର୍ତ୍ତମାନ ରାଜନୈତିକ ପରିସ୍ଥିତି',scopeLiveSub:'ସାମ୍ପ୍ରତିକ ଖବର, ନେତା, ସରକାର ଓ ଆଇନ-ଶୃଙ୍ଖଳା',disclaimer:'ଯାଞ୍ଚିତ ନିର୍ବାଚନ ତଥ୍ୟ ଓ ବର୍ତ୍ତମାନ ୱେବ୍ ସୂଚନା ଅଲଗା ରଖାଯାଏ। ଅନୁପଲବ୍ଧ ତଥ୍ୟ ଅନୁମାନ କରାଯାଏ ନାହିଁ.',placeholder:'ଆପଣଙ୍କ ବିଧାନସଭା କିମ୍ବା ଉତ୍ତର ପ୍ରଦେଶ ରାଜନୀତି ବିଷୟରେ ପଚାରନ୍ତୁ…'},
+    as:{...T.en,seatTitle:'বিধানসভা বাছক',welcomeTitle:'আপুনি কি জানিব বিচাৰে?',welcomeText:'স্বাভাৱিক ভাষাত সোধক। সমষ্টিৰ প্ৰশ্নত যাচাইকৃত নিৰ্বাচনী তথ্য আৰু বৰ্তমান ৰাজনৈতিক প্ৰশ্নত AI Worker থাকিলে live web research ব্যৱহাৰ কৰা হ’ব।',copilot:'POLITICAL INTELLIGENCE ENGINE',scopeSeat:'সমষ্টি ইণ্টেলিজেন্স',scopeSeatSub:'2022 বেছলাইন, ব্যৱধান, বিজয়ী আৰু প্ৰতিদ্বন্দ্বী',scopeBooth:'বুথ ইণ্টেলিজেন্স',scopeBoothSub:'যাচাইকৃত Form 20 বুথ সংকেত',scopeHistory:'নিৰ্বাচনী পৰিৱৰ্তন আৰু ধাৰা',scopeHistorySub:'বিধানসভা বেছলাইন + 2024 ছেগমেণ্ট',scopeLive:'বৰ্তমান ৰাজনৈতিক পৰিস্থিতি',scopeLiveSub:'শেহতীয়া খবৰ, নেতা, চৰকাৰ আৰু আইন-শৃংখলা',disclaimer:'যাচাইকৃত নিৰ্বাচনী তথ্য আৰু বৰ্তমান ৱেব তথ্য পৃথককৈ ৰখা হয়। নথকা তথ্য অনুমান কৰা নহয়.',placeholder:'আপোনাৰ সমষ্টি বা উত্তৰ প্ৰদেশৰ ৰাজনীতিৰ বিষয়ে সোধক…'}
+  });
+  Object.values(T).forEach(t=>{t.ui=t.ui||{history:'History',newChat:'New chat',language:'Language',home:'Home',dashboard:'Live Dashboard'};});
+  T.hi.ui={history:'इतिहास',newChat:'नई चैट',language:'भाषा',home:'होम',dashboard:'लाइव डैशबोर्ड'};T.mr.ui={history:'इतिहास',newChat:'नवीन चॅट',language:'भाषा',home:'होम',dashboard:'लाइव्ह डॅशबोर्ड'};T.te.ui={history:'చరిత్ర',newChat:'కొత్త చాట్',language:'భాష',home:'హోమ్'};T.ta.ui={history:'வரலாறு',newChat:'புதிய உரையாடல்',language:'மொழி',home:'முகப்பு'};T.bn.ui={history:'ইতিহাস',newChat:'নতুন চ্যাট',language:'ভাষা',home:'হোম'};T.gu.ui={history:'ઇતિહાસ',newChat:'નવી ચેટ',language:'ભાષા',home:'હોમ'};T.kn.ui={history:'ಇತಿಹಾಸ',newChat:'ಹೊಸ ಚಾಟ್',language:'ಭಾಷೆ',home:'ಮುಖಪುಟ'};T.ml.ui={history:'ചരിത്രം',newChat:'പുതിയ ചാറ്റ്',language:'ഭാഷ',home:'ഹോം'};T.pa.ui={history:'ਇਤਿਹਾਸ',newChat:'ਨਵੀਂ ਚੈਟ',language:'ਭਾਸ਼ਾ',home:'ਹੋਮ'};T.or.ui={history:'ଇତିହାସ',newChat:'ନୂଆ ଚାଟ୍',language:'ଭାଷା',home:'ହୋମ୍'};T.as.ui={history:'ইতিহাস',newChat:'নতুন চেট',language:'ভাষা',home:'হোম'};
+  const detectLanguage=(text='')=>{const x=String(text||''); if(/[ఀ-౿]/.test(x))return 'te'; if(/[஀-௿]/.test(x))return 'ta'; if(/[ঀ-৿]/.test(x))return /অসম|আছ|কেনে/.test(x)?'as':'bn'; if(/[઀-૿]/.test(x))return 'gu'; if(/[ಀ-೿]/.test(x))return 'kn'; if(/[ഀ-ൿ]/.test(x))return 'ml'; if(/[਀-੿]/.test(x))return 'pa'; if(/[଀-୿]/.test(x))return 'or'; if(/[ऀ-ॿ]/.test(x)){if(/(मी|मला|माझे|माझा|आहे|आहेत|काय|तुम्ही|तुमचा|करा|सांगा)/.test(x))return 'mr'; return 'hi';} if(/[A-Za-z]/.test(x))return 'en'; return null;};
+  const browserLanguage=()=>{const b=(navigator.language||'en').toLowerCase(); if(b.startsWith('mr'))return'mr';if(b.startsWith('hi'))return'hi';if(b.startsWith('te'))return'te';if(b.startsWith('ta'))return'ta';if(b.startsWith('bn'))return'bn';if(b.startsWith('gu'))return'gu';if(b.startsWith('kn'))return'kn';if(b.startsWith('ml'))return'ml';if(b.startsWith('pa'))return'pa';if(b.startsWith('or'))return'or';if(b.startsWith('as'))return'as';return'en';};
+  const uiLanguage=()=>{const v=localStorage.getItem('eviraUILanguage')||'hi';return LANG_NAMES[v]?v:'hi'};
+  function lang(){const mode=localStorage.getItem('eviraLanguage')||'auto'; if(mode==='auto')return detectLanguage(window.__eviraLastInput||'')||'hi'; return LANG_NAMES[mode]?mode:'hi'}
+  function setLang(v){localStorage.setItem('eviraLanguage',v);localStorage.setItem('eviraUILanguage',v==='auto'?'hi':v);applyLanguage();}
+  function applyLanguage(){const v=uiLanguage(), t=T[v]||T.hi; document.documentElement.lang=v; document.querySelectorAll('[data-i18n]').forEach(e=>{const k=e.dataset.i18n;if(t[k])e.textContent=t[k]}); document.querySelectorAll('[data-ui]').forEach(e=>{const k=e.dataset.ui;if(t.ui?.[k])e.textContent=t.ui[k]}); document.querySelectorAll('[data-ai-lang]').forEach(b=>b.classList.toggle('active',b.dataset.aiLang===(localStorage.getItem('eviraLanguage')||'auto'))); const mode=localStorage.getItem('eviraLanguage')||'auto'; const cur=document.querySelector('#evira-language-current');if(cur)cur.textContent=mode==='auto'?`Auto · ${LANG_NAMES[lang()]||'हिंदी'}`:(LANG_NAMES[mode]||'हिंदी'); const inp=$('#ai-input');if(inp)inp.placeholder=t.placeholder; document.querySelectorAll('.ai-suggest').forEach(b=>{const d=t.suggests[Number(b.dataset.suggest||0)];if(d){b.dataset.activeQ=d[0];b.textContent=d[1]}}); const scopes={seat:'scopeSeat',booth:'scopeBooth',history:'scopeHistory',live:'scopeLive'};document.querySelectorAll('.ai-scope').forEach(b=>{const k=b.dataset.scope;if(k){const title=t[scopes[k]], sub=t[scopes[k]+'Sub'];if(title)b.querySelector('strong').textContent=title;if(sub)b.querySelector('span').textContent=sub;}});}
+  window.EVIRA_LANGUAGE={get:lang,set:setLang,detect:detectLanguage,ui:uiLanguage};
+  function scrollChat(){const box=$('#ai-conversation');if(box)requestAnimationFrame(()=>{box.scrollTo({top:box.scrollHeight,behavior:'smooth'});});}
+  const FEEDBACK_KEY='vandiraMessageFeedbackV1';
+  function messageActions(role,text,id){
+    const hi=lang()==='hi';
+    const listenLabel=hi?'सुनें':'Listen', copyLabel=hi?'कॉपी':'Copy', shareLabel=hi?'शेयर':'Share', likeLabel=hi?'उपयोगी':'Helpful', dislikeLabel=hi?'समस्या':'Not helpful', feedbackLabel=hi?'फीडबैक':'Feedback';
+    const listen=role==='assistant'?`<button type="button" class="ai-msg-action" data-action="listen" title="${listenLabel}" aria-label="${listenLabel}">🔊 <span>${listenLabel}</span></button>`:'';
+    return `<div class="ai-message-actions" data-message-id="${id}" data-message-text="${esc(text)}">${listen}<button type="button" class="ai-msg-action" data-action="copy" title="${copyLabel}" aria-label="${copyLabel}">⧉ <span>${copyLabel}</span></button><button type="button" class="ai-msg-action" data-action="like" title="${likeLabel}" aria-label="${likeLabel}">👍</button><button type="button" class="ai-msg-action" data-action="dislike" title="${dislikeLabel}" aria-label="${dislikeLabel}">👎</button><button type="button" class="ai-msg-action" data-action="share" title="${shareLabel}" aria-label="${shareLabel}">↗ <span>${shareLabel}</span></button><button type="button" class="ai-msg-action" data-action="feedback" title="${feedbackLabel}" aria-label="${feedbackLabel}">💬 <span>${feedbackLabel}</span></button></div>`;
+  }
+  function readFeedback(){try{return JSON.parse(localStorage.getItem(FEEDBACK_KEY)||'{}')}catch(e){return {}}}
+  function saveFeedback(v){try{localStorage.setItem(FEEDBACK_KEY,JSON.stringify(v))}catch(e){}}
+  function confidenceLabel(v){const hi=lang()==='hi';const x=String(v||'medium').toLowerCase();if(x.includes('grounded')||x==='high')return hi?'सत्यापित आधार':'Grounded';if(x==='low')return hi?'सीमित':'Limited';return hi?'मध्यम':'Moderate'}
+  function trustEvaluation(d){
+    const hi=lang()==='hi', route=d?.route||{}, gaps=Array.isArray(d?.data_gaps)?d.data_gaps.filter(Boolean):[], points=Array.isArray(d?.key_points)?d.key_points.filter(Boolean):[], sources=Array.isArray(d?.sources)?d.sources.filter(Boolean):[];
+    const answer=String(d?.answer||'').trim();
+    const checks=[
+      {ok:!!route.mode||!!route.intent,label:hi?'Intent route':'Intent route'},
+      {ok:!!(route.ac_no||ac),label:hi?'Entity context':'Entity context'},
+      {ok:points.length>0,label:hi?'Key signals':'Key signals'},
+      {ok:sources.length>0 || !route.requires_fresh_sources,label:hi?'Evidence availability':'Evidence availability'},
+      {ok:answer.length>0,label:hi?'Answer returned':'Answer returned'}
+    ];
+    const passed=checks.filter(x=>x.ok).length;
+    const trust=passed===checks.length && gaps.length===0 ? 'strong' : passed>=3 ? 'review' : 'limited';
+    const status=trust==='strong'?(hi?'विश्वास जाँच: मजबूत':'Trust check: Strong'):trust==='review'?(hi?'विश्वास जाँच: समीक्षा आवश्यक':'Trust check: Review needed'):(hi?'विश्वास जाँच: सीमित':'Trust check: Limited');
+    const note=trust==='strong'?(hi?'उत्तर के लिए route, context और evidence signals उपलब्ध हैं।':'Route, context and evidence signals are present for this answer.'):(hi?'निर्णय से पहले उपलब्ध स्रोत और data gaps की समीक्षा करें।':'Review available sources and data gaps before acting.');
+    return `<section class="ai-trust-panel trust-${trust}" aria-label="${hi?'विश्वास जाँच':'Trust evaluation'}"><div class="ai-trust-head"><span class="ai-trust-kicker">TRUST CHECK</span><strong>${status}</strong></div><div class="ai-trust-checks">${checks.map(x=>`<span class="ai-trust-check ${x.ok?'ok':'warn'}"><i>${x.ok?'✓':'!'}</i>${x.label}</span>`).join('')}</div><p>${esc(note)}</p><small>${hi?'यह structural grounding check है; यह स्वतंत्र fact-check नहीं है।':'This is a structural grounding check; it is not an independent fact-check.'}</small></section>`;
+  }
+  function evidenceSecurityPanel(d){
+    const hi=lang()==='hi', s=d?.evidence_security||d?.retrieval_trace?.evidence_security||{};
+    if(!s||!s.version)return '';
+    const risky=Number(s.risky_source_count||0), q=String(s.query_injection_signal||'none');
+    const status=risky?'review':'protected';
+    const label=risky?(hi?'संदिग्ध evidence — समीक्षा':'Suspicious evidence — review'):(hi?'Evidence सुरक्षित boundary में है':'Evidence isolated as data');
+    const note=risky?(hi?'कुछ retrieved text में instruction-like pattern मिला। इसे केवल data मानें और source की स्वतंत्र समीक्षा करें।':'Some retrieved text contains instruction-like patterns. Treat it only as data and review the source independently.'):(hi?'Retrieved source text को instruction नहीं माना जाता।':'Retrieved source text is treated as data, not instructions.');
+    return `<section class="ai-security-panel sec-${status}" aria-label="${hi?'Evidence सुरक्षा':'Evidence security'}"><div class="sec-head"><span class="sec-kicker">EVIDENCE SECURITY · STEP136</span><strong>${esc(label)}</strong></div><div class="sec-grid"><span>${hi?'Sources':'Sources'}: ${esc(String(s.source_count||0))}</span><span>${hi?'Risky':'Risky'}: ${esc(String(risky))}</span><span>${hi?'Query signal':'Query signal'}: ${esc(q)}</span><span>${hi?'Isolation':'Isolation'}: ${esc(s.isolation||'strict-delimited')}</span></div><p>${esc(note)}</p><small>${hi?'Pattern-based security layer है; complete semantic detection नहीं।':'Pattern-based security layer; not complete semantic detection.'}</small></section>`;
+  }
+  function answerGuardPanel(d){
+    const hi=lang()==='hi', g=d?.answer_guard||{};
+    if(!g||!g.status)return '';
+    const status=String(g.status).toLowerCase();
+    const text=status==='pass'?(hi?'उत्तर संरचनात्मक grounding checks पास करता है':'Answer passed structural grounding checks'):status==='blocked'?(hi?'उच्च-जोखिम claim pattern मिला — उत्तर को verified न मानें':'High-risk claim pattern detected — do not treat this answer as verified'):(hi?'कुछ grounding checks की समीक्षा आवश्यक है':'Some grounding checks require review');
+    const label=status==='pass'?(hi?'PASS':'PASS'):status==='blocked'?(hi?'BLOCKED':'BLOCKED'):(hi?'REVIEW':'REVIEW');
+    const checks=(g.checks||[]).slice(0,6).map(x=>`<span class="guard-check ${x.ok?'ok':status==='blocked'?'block':'warn'}">${x.ok?'✓':'!'} ${esc(x.message||x.id||'Check')}</span>`).join('');
+    return `<section class="ai-answer-guard guard-${esc(status)}" aria-label="${hi?'उत्तर सुरक्षा जाँच':'Answer quality guard'}"><div class="guard-head"><div><span class="guard-kicker">ANSWER GUARD · STEP135</span><strong>${label}</strong></div></div><p>${esc(text)}</p><div class="guard-checks">${checks}</div><small>${hi?'यह deterministic structural guard है; स्वतंत्र semantic fact-check नहीं।':'Deterministic structural guard; not an independent semantic fact-check.'}</small></section>`;
+  }
+  function dataConflictPanel(d){
+    const hi=lang()==='hi', g=d?.data_conflict_guard||{}; if(!g||!g.status)return '';
+    const status=String(g.status).toLowerCase();
+    const label=status==='pass'?'PASS':status==='blocked'?'BLOCKED':'REVIEW';
+    const text=status==='pass'?(hi?'डेटा provenance conflict आढळला नाही.':'No registered data/provenance conflict was detected.') : status==='blocked'?(hi?'डेटा context guard ने उत्तर थांबवले.':'Data-context guard blocked this interpretation.') :(hi?'नोंदवलेला data conflict आहे — source value ला प्राधान्य द्या.':'A registered data conflict exists — prefer the canonical source value.');
+    const cs=(g.conflicts||[]).slice(0,4).map(x=>`<span class="guard-check ${status==='blocked'?'block':'warn'}">${status==='blocked'?'!':'!'} ${esc(x.type||'Conflict')}</span>`).join('');
+    return `<section class="ai-answer-guard guard-${esc(status)}" aria-label="${hi?'डेटा अखंडता जाँच':'Data integrity check'}"><div class="guard-head"><div><span class="guard-kicker">DATA INTEGRITY · STEP139</span><strong>${label}</strong></div></div><p>${esc(text)}</p><div class="guard-checks">${cs||`<span class="guard-check ok">✓ ${hi?'Canonical source policy':'Canonical source policy'}</span>`}</div><small>${hi?'Source value authoritative; derived calculation वेगळी दाखवली पाहिजे.':'Canonical source values are authoritative; derived calculations must remain separately labelled.'}</small></section>`;
+  }
+  function evidencePanel(d){
+    const hi=lang()==='hi', src=Array.isArray(d?.sources)?d.sources:[], gaps=Array.isArray(d?.data_gaps)?d.data_gaps:[], route=d?.route||{}, policy=route.source_policy||'', grounding=Array.isArray(route.grounding)?route.grounding:[], live=Boolean(route.requires_fresh_sources)||String(d?.freshness||'').toLowerCase().includes('live');
+    const status=gaps.length?'limited':live?'current':'verified';
+    const statusText=status==='verified'?(hi?'सत्यापित डेटा':'Verified data'):status==='current'?(hi?'ताज़ा स्रोत आवश्यक':'Current-source layer'): (hi?'डेटा सीमा':'Data limited');
+    const sourceItems=src.map(x=>{if(x&&typeof x==='object'){const title=x.title||x.source||'Source';return x.url?`<div class="ai-evidence-source"><i></i><span><a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${esc(title)}</a>${x.published_at?` · ${esc(x.published_at)}`:''}</span></div>`:`<div class="ai-evidence-source"><i></i><span>${esc(title)}</span></div>`}return `<div class="ai-evidence-source"><i></i><span>${esc(x)}</span></div>`}).join('');
+    const basis=grounding.length?grounding.join(' · '):(policy||'Verified constituency context');
+    return `<section class="ai-evidence-panel" aria-label="${hi?'उत्तर का आधार':'Answer evidence'}"><div class="ai-evidence-head"><span class="ai-evidence-title">${hi?'उत्तर का आधार':'ANSWER BASIS'}</span><span class="ai-evidence-status ${status}">${statusText}</span></div><div class="ai-evidence-body"><div class="ai-evidence-grid"><div class="ai-evidence-item"><div class="ai-evidence-k">${hi?'डेटा आधार':'Data basis'}</div><div class="ai-evidence-v">${esc(basis)}</div></div><div class="ai-evidence-item"><div class="ai-evidence-k">${hi?'विश्वसनीयता':'Confidence'}</div><div class="ai-evidence-v">${esc(confidenceLabel(d?.confidence))}${d?.freshness?` · ${esc(d.freshness)}`:''}</div></div></div>${sourceItems?`<div class="ai-evidence-sources">${sourceItems}</div>`:''}${gaps.length?`<div class="ai-evidence-gap"><strong>${hi?'सीमा':'Limitation'}:</strong> ${esc(gaps.join(' · '))}</div>`:''}</div><div class="ai-evidence-foot">${hi?'स्रोत उपलब्ध नसेल तर VANDIRA तथ्य गृहीत धरत नाही.':'If evidence is unavailable, VANDIRA does not treat an unsupported claim as established fact.'}</div></section>`;
+  }
+  function addMsg(role,text,d){document.body.classList.add('ai-has-chat');const wrap=document.createElement('div');wrap.className='ai-msg '+role;const avatar=role==='assistant'?'<span class="mini-avatar">✦</span>':'';const mid='msg_'+Date.now()+'_'+Math.random().toString(36).slice(2,7);let html=`${avatar}<div><div class="bubble">${esc(text).replace(/\n/g,'<br>')}</div>`;if(role==='assistant'&&d){if(d.key_points?.length)html+=`<ul style="margin:8px 0 0 18px;padding:0;color:#4d6279;font-size:11px">${d.key_points.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;html+=evidencePanel(d);html+=answerGuardPanel(d);html+=dataConflictPanel(d);html+=trustEvaluation(d);if(d.sources?.length)html+=`<div class="ai-source-row">${lang()==='hi'?'स्रोत':'Sources'}: ${esc(d.sources.map(x=>typeof x==='object'?(x.title||x.source||'Source'):x).join(' · '))}</div>`;if(d.data_gaps?.length)html+=`<div class="ai-gap">${lang()==='hi'?'डेटा सीमा':'Data gap'}: ${esc(d.data_gaps.join(' · '))}</div>`;if(d.route?.intent)html+=`<div class="ai-meta">${lang()==='hi'?'इंटेलिजेंस लेयर':'Intelligence layer'}: ${esc(d.route.intent)}</div>`;html+=`<div class="ai-meta">${lang()==='hi'?'विश्वसनीयता':'Confidence'}: ${esc(confidenceLabel(d.confidence))} · ${esc(d.freshness||'')}</div>`;html+=intelligenceBrief(d);html+=decisionSnapshot(d);html+=decisionWorkspace(d);html+=recommendedActionRail(d);html+=answerActionRail();}html+=messageActions(role,text,mid)+'</div>';wrap.innerHTML=html;$('#ai-thread').appendChild(wrap);scrollChat();}
+  async function copyMessage(text,button){try{await navigator.clipboard.writeText(text);button.classList.add('done');button.querySelector('span')?.replaceChildren(document.createTextNode(lang()==='hi'?'कॉपी हो गया':'Copied'));setTimeout(()=>{button.classList.remove('done');button.querySelector('span')?.replaceChildren(document.createTextNode(lang()==='hi'?'कॉपी':'Copy'));},1400);}catch(e){const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();}}
+  function toggleReaction(id,value,bar){const all=readFeedback();all[id]=all[id]||{};all[id].reaction=all[id].reaction===value?null:value;saveFeedback(all);bar.querySelectorAll('[data-action=like],[data-action=dislike]').forEach(b=>b.classList.remove('selected'));if(all[id].reaction)bar.querySelector(`[data-action=${all[id].reaction}]`)?.classList.add('selected');}
+  function listenMessage(text){if(window.VANDIRA_TTS?.supported){window.VANDIRA_TTS.speak(text);return;}if(lang()==='hi')alert('इस ब्राउज़र में voice output उपलब्ध नहीं है।');}
+  async function shareMessage(text){const title='VANDIRA — Political Intelligence Consultant';if(navigator.share){try{await navigator.share({title,text})}catch(e){}}else{await copyMessage(text,{classList:{add(){},remove(){}},querySelector(){return null}});}}
+  document.addEventListener('click',e=>{const b=e.target.closest('.ai-msg-action');if(!b)return;const bar=b.closest('.ai-message-actions');const text=bar?.dataset.messageText||'';const id=bar?.dataset.messageId||'';switch(b.dataset.action){case'copy':copyMessage(text,b);break;case'listen':listenMessage(text);break;case'like':toggleReaction(id,'like',bar);break;case'dislike':toggleReaction(id,'dislike',bar);break;case'share':shareMessage(text);break;case'feedback':{const answer=prompt(lang()==='hi'?'इस उत्तर के बारे में आपका फीडबैक लिखें:':'Tell us what could be improved:');if(answer?.trim()){const all=readFeedback();all[id]=all[id]||{};all[id].feedback=answer.trim();all[id].at=Date.now();saveFeedback(all);b.classList.add('done');}}break;}});
+
+  function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+  const more=$('#evira-more-open'), moreMenu=$('#evira-more-menu');
+  function toggleMore(force){const open=force??!moreMenu.classList.contains('open');moreMenu.classList.toggle('open',open);moreMenu.setAttribute('aria-hidden',String(!open));more.setAttribute('aria-expanded',String(open));}
+  more?.addEventListener('click',e=>{e.stopPropagation();toggleMore();});
+  document.addEventListener('click',e=>{if(moreMenu?.classList.contains('open')&&!moreMenu.contains(e.target)&&e.target!==more)toggleMore(false);});
+  document.querySelectorAll('[data-ai-lang]').forEach(b=>b.addEventListener('click',()=>{setLang(b.dataset.aiLang);toggleMore(false);}));
+  
+  function recommendedActionRail(d){
+    if(!ac) return '';
+    const hi=lang()==='hi';
+    const intent=String(d?.route?.intent||'').toLowerCase();
+    const low=String(d?.confidence||'').toLowerCase()==='low' || Array.isArray(d?.data_gaps)&&d.data_gaps.length>0;
+    let primary={label:hi?'सीट डॉसियर खोलें':'Open seat dossier',href:`constituency.html?ac=${encodeURIComponent(ac)}${party?'&party='+encodeURIComponent(party):''}`,icon:'◆'};
+    let secondary=[];
+    if(intent.includes('candidate')){
+      primary={label:hi?'Candidate 360 खोलें':'Open Candidate 360',href:`candidate.html?ac=${encodeURIComponent(ac)}`,icon:'◈'};
+      secondary=[{label:hi?'मुकाबला देखें':'View competition',href:`competitive.html?ac=${encodeURIComponent(ac)}${party?'&party='+encodeURIComponent(party):''}`,icon:'◇'}];
+    }else if(intent.includes('competitive')||intent.includes('competition')){
+      primary={label:hi?'मुकाबला देखें':'Open competition',href:`competitive.html?ac=${encodeURIComponent(ac)}${party?'&party='+encodeURIComponent(party):''}`,icon:'◇'};
+      secondary=[{label:hi?'Candidate 360':'Candidate 360',href:`candidate.html?ac=${encodeURIComponent(ac)}`,icon:'◈'}];
+    }else if(intent.includes('issue')){
+      primary={label:hi?'मुद्दा विश्लेषण खोलें':'Open issue intelligence',href:`issue-ground.html?ac=${encodeURIComponent(ac)}`,icon:'◉'};
+      secondary=[{label:hi?'सीट डॉसियर':'Seat dossier',href:`constituency.html?ac=${encodeURIComponent(ac)}${party?'&party='+encodeURIComponent(party):''}`,icon:'◆'}];
+    }else if(intent.includes('party')||intent.includes('alliance')){
+      primary={label:hi?'Party intelligence खोलें':'Open party intelligence',href:`party.html?ac=${encodeURIComponent(ac)}${party?'&party='+encodeURIComponent(party):''}`,icon:'◈'};
+      secondary=[{label:hi?'मुकाबला देखें':'View competition',href:`competitive.html?ac=${encodeURIComponent(ac)}${party?'&party='+encodeURIComponent(party):''}`,icon:'◇'}];
+    }else if(intent.includes('research')||intent.includes('survey')){
+      primary={label:hi?'Research intelligence खोलें':'Open research intelligence',href:`research.html?ac=${encodeURIComponent(ac)}`,icon:'▣'};
+      secondary=[{label:hi?'Evidence देखें':'Review evidence',href:`ai.html?ac=${encodeURIComponent(ac)}${party?'&party='+encodeURIComponent(party):''}&q=${encodeURIComponent(hi?'इस निष्कर्ष के स्रोत और डेटा आधार विस्तार से बताइए।':'Show the sources and data basis behind this conclusion.')}`,icon:'✓'}];
+    }else if(intent.includes('historical')||intent.includes('history')){
+      primary={label:hi?'2022–2024 बदलाव देखें':'Open 2022–2024 movement',href:`ai.html?ac=${encodeURIComponent(ac)}${party?'&party='+encodeURIComponent(party):''}&q=${encodeURIComponent(hi?'2022 और 2024 में इस सीट में क्या बदलाव दिखता है?':'What changed for this constituency between 2022 and 2024?')}`,icon:'↗'};
+      secondary=[{label:hi?'सीट डॉसियर':'Seat dossier',href:`constituency.html?ac=${encodeURIComponent(ac)}${party?'&party='+encodeURIComponent(party):''}`,icon:'◆'}];
+    }else if(intent.includes('booth')){
+      primary={label:hi?'बूथ संकेत पूछें':'Open booth signals',href:`ai.html?ac=${encodeURIComponent(ac)}${party?'&party='+encodeURIComponent(party):''}&q=${encodeURIComponent(hi?'बूथ डेटा से इस सीट की ताकत और कमजोर संकेत क्या दिखते हैं?':'What do booth data show about strength and weak signals in this constituency?')}`,icon:'◉'};
+      secondary=[{label:hi?'सीट डॉसियर':'Seat dossier',href:`constituency.html?ac=${encodeURIComponent(ac)}${party?'&party='+encodeURIComponent(party):''}`,icon:'◆'}];
+    }
+    if(low && !secondary.some(x=>x.href.includes('q='))){
+      secondary.push({label:hi?'Evidence verify करें':'Verify evidence',href:`ai.html?ac=${encodeURIComponent(ac)}${party?'&party='+encodeURIComponent(party):''}&q=${encodeURIComponent(hi?'इस उत्तर के लिए उपलब्ध स्रोत, डेटा आधार और सीमाएँ दिखाइए।':'Show the available sources, data basis and limitations for this answer.')}`,icon:'✓'});
+    }
+    return `<section class="ai-recommended-next" aria-label="${hi?'अनुशंसित अगला कदम':'Recommended next step'}"><div class="ai-recommended-copy"><span class="ai-recommended-kicker">${hi?'RECOMMENDED NEXT STEP':'RECOMMENDED NEXT STEP'}</span><strong>${hi?'अब किस intelligence पर जाना चाहिए?':'What should you inspect next?'}</strong><span>${low?(hi?'इस उत्तर में डेटा सीमा है—पहले evidence verify करना बेहतर है।':'This answer has a data limitation — verify the evidence before acting on it.'):(hi?'आपके वर्तमान प्रश्न के आधार पर अगला सबसे उपयोगी intelligence layer चुना गया है।':'Based on the current question, VANDIRA has selected the most useful next intelligence layer.')}</span></div><div class="ai-recommended-actions"><a class="ai-rec-primary" href="${primary.href}"><span>${primary.icon}</span>${primary.label}<b>→</b></a>${secondary.slice(0,2).map(x=>`<a class="ai-rec-secondary" href="${x.href}"><span>${x.icon}</span>${x.label}<b>→</b></a>`).join('')}</div></section>`;
+  }
+  function intelligenceBrief(d){
+    const hi=lang()==='hi', route=d?.route||{}, points=Array.isArray(d?.key_points)?d.key_points.filter(Boolean).slice(0,3):[], gaps=Array.isArray(d?.data_gaps)?d.data_gaps.filter(Boolean):[];
+    const answer=String(d?.answer||'').replace(/\s+/g,' ').trim();
+    const readout=answer.length>260?answer.slice(0,257)+'…':answer;
+    const confidence=confidenceLabel(d?.confidence);
+    const layer=route.intent||route.mode|| (hi?'Seat Intelligence':'Seat Intelligence');
+    const guardrail=(String(d?.confidence||'').toLowerCase()==='low'||gaps.length)
+      ? (hi?'निर्णय से पहले evidence और data gaps verify करें।':'Verify evidence and data gaps before making a decision.')
+      : (hi?'यह brief उपलब्ध evidence का decision-context देता है; इसे 2027 forecast न मानें।':'This brief provides decision context from available evidence; it is not a 2027 forecast.');
+    return `<section class="ai-intelligence-brief" aria-label="${hi?'इंटेलिजेंस ब्रीफ':'Intelligence brief'}"><div class="ai-brief-head"><div><span class="ai-brief-kicker">INTELLIGENCE BRIEF</span><strong>${hi?'निर्णय के लिए संक्षिप्त readout':'Decision-ready intelligence readout'}</strong></div><span class="ai-brief-layer">${esc(layer)}</span></div><div class="ai-brief-readout">${esc(readout|| (hi?'उत्तर उपलब्ध नहीं है।':'No readout available.'))}</div>${points.length?`<div class="ai-brief-grid"><div class="ai-brief-block"><span>${hi?'VERIFIED SIGNALS':'VERIFIED SIGNALS'}</span><ul>${points.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div><div class="ai-brief-block"><span>${hi?'EVIDENCE STATUS':'EVIDENCE STATUS'}</span><p><b>${esc(confidence)}</b>${d?.freshness?` · ${esc(d.freshness)}`:''}</p><small>${esc(guardrail)}</small></div></div>`:`<div class="ai-brief-status"><b>${esc(confidence)}</b><span>${esc(guardrail)}</span></div>`}${gaps.length?`<div class="ai-brief-gaps"><b>${hi?'डेटा सीमा':'Data gaps'}:</b> ${esc(gaps.slice(0,2).join(' · '))}</div>`:''}</section>`;
+  }
+  function decisionSnapshot(d){
+    const hi=lang()==='hi', route=d?.route||{}, points=Array.isArray(d?.key_points)?d.key_points.filter(Boolean).slice(0,3):[], gaps=Array.isArray(d?.data_gaps)?d.data_gaps.filter(Boolean):[];
+    const confidence=confidenceLabel(d?.confidence), layer=route.intent||route.mode||(hi?'Seat Intelligence':'Seat Intelligence');
+    const readout=String(d?.answer||'').replace(/\s+/g,' ').trim();
+    const id='decision_'+Date.now()+'_'+Math.random().toString(36).slice(2,6);
+    const snapshot=()=>({version:'STEP131',createdAt:new Date().toISOString(),ac:ac||null,party:party||null,layer,confidence,freshness:d?.freshness||'',readout,verifiedSignals:points,dataGaps:gaps});
+    setTimeout(()=>{const root=document.getElementById(id);if(!root)return;root.querySelector('[data-decision-copy]')?.addEventListener('click',async()=>{const x=snapshot();const text=[`VANDIRA DECISION SNAPSHOT`,`Layer: ${x.layer}`,x.ac?`AC: ${x.ac}`:'',x.party?`Party: ${x.party}`:'',`Confidence: ${x.confidence}`,x.freshness?`Freshness: ${x.freshness}`:'',`Readout: ${x.readout}`,x.verifiedSignals.length?'Verified signals:\n- '+x.verifiedSignals.join('\n- '):'',x.dataGaps.length?'Data gaps: '+x.dataGaps.join(' · '):''].filter(Boolean).join('\n');try{await navigator.clipboard.writeText(text);const b=root.querySelector('[data-decision-copy]');b.classList.add('saved');b.textContent=hi?'कॉपी हो गया':'Copied';setTimeout(()=>{b.classList.remove('saved');b.textContent=hi?'कॉपी':'Copy'},1400)}catch(e){}});root.querySelector('[data-decision-save]')?.addEventListener('click',()=>{const key='vandiraDecisionSnapshotsV1';let list=[];try{list=JSON.parse(localStorage.getItem(key)||'[]')}catch(e){};list.unshift(snapshot());localStorage.setItem(key,JSON.stringify(list.slice(0,25)));const b=root.querySelector('[data-decision-save]');b.classList.add('saved');b.textContent=hi?'सेव हो गया':'Saved';setTimeout(()=>{b.classList.remove('saved');b.textContent=hi?'सेव':'Save'},1400)});},0);
+    return `<section id="${id}" class="ai-decision-snapshot" aria-label="${hi?'निर्णय स्नैपशॉट':'Decision snapshot'}"><div class="ai-decision-copy"><span class="ai-decision-kicker">DECISION SNAPSHOT</span><span class="ai-decision-title">${hi?'इस उत्तर को decision record की तरह रखें':'Keep this answer as a decision record'}</span><span class="ai-decision-sub">${hi?'केवल उपलब्ध evidence और इस उत्तर के context पर आधारित।':'Based only on the available evidence and this answer context.'}</span></div><div class="ai-decision-actions"><button type="button" data-decision-copy>${hi?'कॉपी':'Copy'}</button><button type="button" data-decision-save>${hi?'सेव':'Save'}</button></div></section>`;
+  }
+  function decisionWorkspace(d){
+    const hi=lang()==='hi', route=d?.route||{}, gaps=Array.isArray(d?.data_gaps)?d.data_gaps.filter(Boolean):[], points=Array.isArray(d?.key_points)?d.key_points.filter(Boolean).slice(0,3):[];
+    const intent=String(route.intent||route.mode||'').toLowerCase();
+    const low=String(d?.confidence||'').toLowerCase()==='low' || gaps.length>0;
+    const base=`ac=${encodeURIComponent(ac||'')}${party?'&party='+encodeURIComponent(party):''}`;
+    const primary=intent.includes('booth')
+      ? {label:hi?'बूथ संकेत':'Booth signals',href:`ai.html?${base}&q=${encodeURIComponent(hi?'इस सीट के बूथ डेटा से मुख्य संकेत और डेटा सीमाएँ बताइए।':'Give the key booth signals and data limitations for this constituency.')}`}
+      : intent.includes('histor')
+      ? {label:hi?'2022–2024 बदलाव':'2022–2024 movement',href:`ai.html?${base}&q=${encodeURIComponent(hi?'2022 और 2024 के संदर्भ में इस सीट में क्या बदलाव दिखता है?':'What changed for this constituency between 2022 and 2024?')}`}
+      : {label:hi?'सीट डॉसियर':'Seat dossier',href:`constituency.html?${base}`};
+    const action=low
+      ? {label:hi?'Evidence verify करें':'Verify evidence',href:`ai.html?${base}&q=${encodeURIComponent(hi?'इस उत्तर के स्रोत, डेटा आधार और सीमाएँ दिखाइए।':'Show the sources, data basis and limitations for this answer.')}`}
+      : {label:hi?'मुकाबला तपासा':'Inspect competition',href:`competitive.html?${base}`};
+    return `<section class="ai-decision-workspace" aria-label="${hi?'Decision workspace':'Decision workspace'}"><div class="ai-workspace-head"><div><span class="ai-workspace-kicker">DECISION WORKSPACE</span><strong>${hi?'एकाच ठिकाणी निर्णयासाठी आवश्यक context':'Decision context in one workspace'}</strong><span>${hi?'उत्तर, evidence, brief आणि पुढील action एकत्र पाहा.':'Keep the answer, evidence, brief and next action together.'}</span></div><span class="ai-workspace-context">${esc(route.intent||route.mode||'Intelligence')}</span></div><div class="ai-workspace-grid"><article><span class="ai-workspace-label">ANSWER</span><p>${esc((String(d?.answer||'').replace(/\s+/g,' ').trim()).slice(0,180))}${String(d?.answer||'').length>180?'…':''}</p></article><article><span class="ai-workspace-label">EVIDENCE</span><p><b>${esc(confidenceLabel(d?.confidence))}</b>${d?.freshness?` · ${esc(d.freshness)}`:''}</p><small>${points.length?esc(points[0]):(hi?'सत्यापित signal उपलब्ध असल्यास येथे दिसेल।':'Verified signal will appear here when available.')}</small></article><article><span class="ai-workspace-label">DECISION GUARDRAIL</span><p>${low?(hi?'पहिले evidence verify करा':'Verify evidence first'):(hi?'उपलब्ध evidence वर आधारित context':'Use available evidence as context')}</p><small>${gaps.length?esc(gaps[0]):(hi?'अनुमानित 2027 निकाल म्हणून वापरू नका.':'Do not treat this as a 2027 election forecast.')}</small></article><article class="ai-workspace-action"><span class="ai-workspace-label">NEXT ACTION</span><a href="${action.href}">${action.label}<b>→</b></a><small>${hi?'निर्णयापूर्वी सर्वात उपयुक्त पुढील तपासणी':'Most useful next inspection before acting'}</small></article></div><div class="ai-workspace-footer"><a href="${primary.href}">${primary.label} →</a><a href="constituency.html?${base}">${hi?'Seat dossier':'Seat dossier'} →</a></div></section>`;
+  }
+  function answerActionRail(){
+    if(!ac) return '';
+    const A=lang()==='hi';
+    const q=encodeURIComponent(A?'इस विधानसभा के बारे में और विस्तार से बताइए':'Give me a deeper intelligence readout for this constituency');
+    const booth=encodeURIComponent(A?'इस विधानसभा के बूथ डेटा से क्या संकेत मिलते हैं?':'What does the booth data show for this constituency?');
+    const hist=encodeURIComponent(A?'2022 और 2024 के संदर्भ में इस सीट में क्या बदलाव दिखता है?':'What changed for this constituency between 2022 and 2024?');
+    const base=`ac=${encodeURIComponent(ac)}${party?'&party='+encodeURIComponent(party):''}`;
+    return `<div class="ai-answer-actions" aria-label="${A?'अगले इंटेलिजेंस विकल्प':'Next intelligence actions'}"><span class="ai-answer-actions-label">${A?'NEXT INTELLIGENCE':'NEXT INTELLIGENCE'}</span><a class="ai-action primary" href="constituency.html?${base}"><span class="ai-action-icon">◆</span><span>${A?'सीट डॉसियर':'Seat dossier'}</span><b>→</b></a><a class="ai-action" href="candidate.html?ac=${encodeURIComponent(ac)}"><span class="ai-action-icon">◈</span><span>${A?'Candidate 360':'Candidate 360'}</span><b>→</b></a><a class="ai-action" href="competitive.html?${base}"><span class="ai-action-icon">◇</span><span>${A?'मुकाबला':'Competition'}</span><b>→</b></a><a class="ai-action" href="ai.html?${base}&q=${q}"><span class="ai-action-icon">✦</span><span>${A?'Deep analysis':'Deep analysis'}</span><b>→</b></a><a class="ai-action" href="ai.html?${base}&q=${booth}"><span class="ai-action-icon">◉</span><span>${A?'बूथ संकेत':'Booth signals'}</span><b>→</b></a><a class="ai-action" href="ai.html?${base}&q=${hist}"><span class="ai-action-icon">↗</span><span>${A?'2022 vs 2024':'2022 vs 2024'}</span><b>→</b></a></div>`;
+  }
+
+function mode(q){return window.TopAnalyticaAI?.context?null:null}
+  async function boot(){
+    if(!window.TOP_ASSEMBLY_DB){try{window.TOP_ASSEMBLY_DB=await fetch('data/assembly_canonical_master.json',{cache:'no-store'}).then(r=>r.json())}catch(e){}}
+    const db=window.TOP_ASSEMBLY_DB; const sel=$('#ai-seat-select'); if(db?.constituencies){sel.innerHTML='<option value="">'+(lang()==='hi'?'विधानसभा चुनें…':lang()==='mr'?'विधानसभा निवडा…':lang()==='te'?'నియోజకవర్గాన్ని ఎంచుకోండి…':lang()==='ta'?'தொகுதியைத் தேர்ந்தெடுக்கவும்…':'Select a constituency…')+'</option>'+db.constituencies.map(x=>`<option value="${x.ac_no}">AC ${x.ac_no} · ${esc(x.constituency)}</option>`).join('');}
+    if(ac){sel.value=String(ac);await chooseSeat(ac);} else updateContextCard();
+    applyLanguage();
+    const initialQuestion=qs.get('q');
+    if(initialQuestion){setTimeout(()=>ask(initialQuestion),220);}
+  }
+  async function chooseSeat(n){ac=Number(n)||null;if(!ac){ctx={};updateContextCard();return} localStorage.setItem('taAiAC',String(ac)); try{ctx=await window.TopAnalyticaAI.loadHomeContext(ac,party)}catch(e){ctx=window.TopAnalyticaAI.context({db:window.TOP_ASSEMBLY_DB,acNo:ac,party})||{}} updateContextCard();}
+  function updateContextCard(){const box=$('#ai-selected-context'),seat=$('#ai-selected-seat'),meta=$('#ai-selected-meta'),link=$('#ai-selected-open');if(!box)return;if(!ac){document.body.classList.remove('ai-has-seat');seat.textContent=lang()==='hi'?'पूरी UP राजनीति':'UP political intelligence';meta.textContent=lang()==='hi'?'विधानसभा चुनने पर seat-specific context यहाँ दिखेगा.':'Select a constituency to activate seat-specific context.';link.href='constituency.html';return} document.body.classList.add('ai-has-seat');const item=window.TOP_ASSEMBLY_DB?.constituencies?.find(x=>Number(x.ac_no)===Number(ac));const name=item?.constituency||`AC ${ac}`;seat.textContent=`AC ${ac} · ${name}`;meta.textContent=party?(lang()==='hi'?`चयनित पार्टी: ${party} · verified election context active.`:`Selected party: ${party} · verified election context active.`):(lang()==='hi'?'Verified election context active.':'Verified election context active.');link.href=`constituency.html?ac=${encodeURIComponent(ac)}${party?'&party='+encodeURIComponent(party):''}`;}
+  $('#ai-seat-select').addEventListener('change',e=>chooseSeat(e.target.value));
+  async function ask(q){q=String(q||'').trim();if(!q)return;window.__eviraLastInput=q;addMsg('user',q);const th=document.createElement('div');th.className='ai-msg assistant';th.innerHTML='<span class="mini-avatar">✦</span><div><div class="bubble"><div class="ai-typing"><i></i><i></i><i></i><span style="margin-left:5px">Analysing…</span></div></div></div>';$('#ai-thread').appendChild(th);scrollChat();const route=window.TopAnalyticaAI.route?window.TopAnalyticaAI.route(q,ctx,{acNo:ac,party}):{mode:'seat'};try{const d=await window.TopAnalyticaAI.ask(q,{context:ctx,acNo:ac,party,mode:route.mode,language:lang(),recentTurns:activeHistory?.turns||[]});th.remove();const answer=d.answer||'No answer returned.';addMsg('assistant',answer,d);window.dispatchEvent(new CustomEvent('vandira:assistant-answer',{detail:{text:answer,data:d||{}}}));}catch(e){th.remove();const answer=lang()==='hi'?'AI उत्तर अभी उपलब्ध नहीं है।':'The AI answer is not available right now.';addMsg('assistant',answer,{confidence:'low',data_gaps:['AI Worker unavailable']});window.dispatchEvent(new CustomEvent('vandira:assistant-answer',{detail:{text:answer,data:{confidence:'low'}}}) )}}
+  $('#ai-send').addEventListener('click',()=>{const i=$('#ai-input');ask(i.value);i.value='';i.style.height='auto'});
+  // STEP1 — EVIRA chat history: local, private and independent of election data.
+  const HISTORY_KEY='eviraChatHistoryV1';
+  let activeHistoryId=qs.get('chat')||null;
+  let activeHistory={id:activeHistoryId||('chat_'+Date.now()),title:'New conversation',createdAt:Date.now(),updatedAt:Date.now(),ac:ac||null,turns:[]};
+  function readHistory(){try{return JSON.parse(localStorage.getItem(HISTORY_KEY)||'[]')}catch(e){return []}}
+  function writeHistory(list){localStorage.setItem(HISTORY_KEY,JSON.stringify(list.slice(0,50)));}
+  function saveHistory(){activeHistory.updatedAt=Date.now();activeHistory.ac=ac||activeHistory.ac;const list=readHistory().filter(x=>x.id!==activeHistory.id);list.unshift(activeHistory);writeHistory(list);renderHistory();}
+  function historyTitle(q){const t=String(q||'').replace(/\s+/g,' ').trim();return t.length>54?t.slice(0,54)+'…':(t||'New conversation')}
+  function renderHistory(){const box=$('#evira-history-list');if(!box)return;const list=readHistory();if(!list.length){box.innerHTML='<div class="evira-history-empty">No previous conversations yet.<br><span>Your VANDIRA chats will appear here.</span></div>';return;}box.innerHTML=list.map(x=>`<button class="evira-history-item ${x.id===activeHistory.id?'active':''}" data-history-id="${esc(x.id)}"><strong>${esc(x.title||'Conversation')}</strong><small>${x.ac?'AC '+esc(x.ac):'General'} · ${new Date(x.updatedAt).toLocaleDateString()}</small></button>`).join('');box.querySelectorAll('[data-history-id]').forEach(b=>b.addEventListener('click',()=>loadHistory(b.dataset.historyId)));}
+  function openHistory(){document.body.classList.add('evira-history-open');$('#evira-history').setAttribute('aria-hidden','false');renderHistory();}
+  function closeHistory(){document.body.classList.remove('evira-history-open');$('#evira-history').setAttribute('aria-hidden','true');}
+  function newChat(){activeHistory={id:'chat_'+Date.now(),title:'New conversation',createdAt:Date.now(),updatedAt:Date.now(),ac:ac||null,turns:[]};$('#ai-thread').innerHTML='';document.body.classList.remove('ai-has-chat');closeHistory();history.replaceState({},'',location.pathname+(ac?`?ac=${ac}${party?'&party='+encodeURIComponent(party):''}`:''));}
+  function loadHistory(id){const found=readHistory().find(x=>x.id===id);if(!found)return;activeHistory=found;ac=found.ac||ac;$('#ai-thread').innerHTML='';document.body.classList.toggle('ai-has-chat',found.turns.length>0);found.turns.forEach(t=>addMsg(t.role,t.text,t.data,true));closeHistory();renderHistory();}
+  const _addMsg=addMsg; addMsg=function(role,text,d,restoring){_addMsg(role,text,d);if(!restoring){activeHistory.turns.push({role,text,data:d||null});if(role==='user'&&activeHistory.title==='New conversation')activeHistory.title=historyTitle(text);saveHistory();}};
+  $('#evira-history-close')?.addEventListener('click',closeHistory);$('#evira-history-backdrop')?.addEventListener('click',closeHistory);$('#evira-new-chat')?.addEventListener('click',newChat);$('#evira-history-new')?.addEventListener('click',newChat);
+  $('#evira-history-menu')?.addEventListener('click',()=>{toggleMore(false);openHistory();});
+  renderHistory();
+  // STEP98 — Explicitly user-controlled, local-first consultant context.
+  const contextModal=$('#vandira-context-modal');
+  const contextLines=id=>(document.querySelector(id)?.value||'').split(/\n+/).map(x=>x.trim()).filter(Boolean).slice(0,12);
+  function openConsultantContext(){const c=window.VandiraPersonalContext?.read?.()||{};$('#vc-objective').value=c.objective||'';$('#vc-focus').value=(c.focus_areas||[]).join('\n');$('#vc-notes').value=(c.working_notes||[]).join('\n');$('#vc-facts').value=(c.established_facts||[]).join('\n');$('#vc-pending').value=(c.pending_questions||[]).join('\n');$('#vc-depth').value=c.preferences?.response_depth||'standard';contextModal?.classList.add('open');contextModal?.setAttribute('aria-hidden','false');}
+  function closeConsultantContext(){contextModal?.classList.remove('open');contextModal?.setAttribute('aria-hidden','true');}
+  $('#evira-context-menu')?.addEventListener('click',()=>{toggleMore(false);openConsultantContext();});
+  $('#vandira-context-close')?.addEventListener('click',closeConsultantContext);$('#vandira-context-backdrop')?.addEventListener('click',closeConsultantContext);
+  $('#vandira-context-clear')?.addEventListener('click',()=>{window.VandiraPersonalContext?.clear?.();openConsultantContext();});
+  $('#vandira-context-form')?.addEventListener('submit',e=>{e.preventDefault();window.VandiraPersonalContext?.save?.({objective:$('#vc-objective').value,focus_areas:contextLines('#vc-focus'),working_notes:contextLines('#vc-notes'),established_facts:contextLines('#vc-facts'),pending_questions:contextLines('#vc-pending'),preferences:{response_depth:$('#vc-depth').value,language:lang()}});closeConsultantContext();});
+  const PROFILE_KEY='eviraProfileV1';
+  const profileModal=$('#evira-profile-modal');
+  function readProfile(){try{return JSON.parse(localStorage.getItem(PROFILE_KEY)||'null')}catch(e){return null}}
+  function openProfile(){const p=readProfile();if(p){$('#evira-profile-name').value=p.name||'';$('#evira-profile-phone').value=p.phone||'';$('#evira-profile-role').value=p.role||'';$('#evira-profile-consent').checked=!!p.consent;}profileModal?.classList.add('open');profileModal?.setAttribute('aria-hidden','false');document.body.classList.add('evira-profile-open');setTimeout(()=>$('#evira-profile-name')?.focus(),50);}
+  function closeProfile(){profileModal?.classList.remove('open');profileModal?.setAttribute('aria-hidden','true');document.body.classList.remove('evira-profile-open');}
+  $('#evira-profile-menu')?.addEventListener('click',()=>{toggleMore(false);openProfile();});
+  $('#evira-profile-close')?.addEventListener('click',closeProfile);$('#evira-profile-backdrop')?.addEventListener('click',closeProfile);
+  $('#evira-profile-form')?.addEventListener('submit',e=>{e.preventDefault();const name=$('#evira-profile-name').value.trim(),phone=$('#evira-profile-phone').value.replace(/\D/g,'').slice(-10),role=$('#evira-profile-role').value,consent=$('#evira-profile-consent').checked;if(!name||phone.length!==10||!role)return;localStorage.setItem(PROFILE_KEY,JSON.stringify({name,phone,role,consent,updatedAt:Date.now()}));closeProfile();});
+$('#ai-input').addEventListener('input',e=>{window.__eviraLastInput=e.target.value; e.target.style.height='auto';e.target.style.height=Math.min(e.target.scrollHeight,100)+'px'});
+$('#ai-input').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();$('#ai-send').click()}});document.querySelectorAll('.ai-suggest,.ai-scope').forEach(b=>b.addEventListener('click',()=>{const q=b.dataset.activeQ||b.dataset.q;ask(q)}));
+  window.addEventListener('pageshow',e=>{if(e.persisted){location.reload();}});
+  boot();
+})();
+</script>
+<script>(function(){const b=document.getElementById('vandira-tts-stop');if(!b)return;window.addEventListener('vandira:tts-start',()=>b.classList.add('active'));window.addEventListener('vandira:tts-end',()=>b.classList.remove('active'));window.addEventListener('vandira:tts-error',()=>b.classList.remove('active'));})();</script>
+<script src="assets/mobile-runtime.js" defer></script></body></html>

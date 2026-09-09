@@ -1,0 +1,13 @@
+{
+  "schema":"step100.1",
+  "name":"VANDIRA Proactive Alerts & Monitoring",
+  "purpose":"Detect meaningful changes in Uttar Pradesh political intelligence without inventing events or generating targeted persuasion.",
+  "flow":["retrieve","normalize","fingerprint","compare","verify","score_importance","suppress_noise","emit_alert","explain","recommend_next_check","audit"],
+  "signal_types":["official_update","political_news","election_update","government_update","constituency_signal"],
+  "severity":["critical","high","medium","low","info"],
+  "source_priority":["official_primary","verified_structured_data","reputable_reporting","discovery_reference"],
+  "rules":["A new article is not automatically a verified fact","Duplicate URLs and near-identical titles are suppressed","Conflicting evidence is surfaced rather than resolved by guessing","Historical data does not become a live alert unless a fresh source changes it","No sensitive personal attributes are used for political targeting","Forecasts and probabilities are not invented"],
+  "state":{"browser_local_baseline":true,"server_persistence_optional":true,"kv_binding":"VANDIRA_MONITOR_KV"},
+  "audit":["checked_at","signal_fingerprint","source","tier","published_at","severity","reason","verification_state"],
+  "delivery":"STEP100 provides deterministic detection and UI-ready alerts. Push/email/SMS delivery requires a separately configured scheduler/channel and is not claimed by the static Pages runtime."
+}

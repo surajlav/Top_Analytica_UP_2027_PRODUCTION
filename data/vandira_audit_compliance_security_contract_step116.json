@@ -1,0 +1,39 @@
+{
+  "step": 116,
+  "name": "VANDIRA Audit / Compliance / Security Intelligence",
+  "version": "1.0",
+  "purpose": "Evidence-aware runtime audit, security headers, data-integrity checks and deployment-safety controls.",
+  "layers": [
+    "immutable-data-integrity verification",
+    "runtime audit metadata",
+    "security response headers",
+    "input bounding and sanitization",
+    "provider-secret boundary",
+    "deployment safety",
+    "provenance and compliance status"
+  ],
+  "rules": [
+    "Canonical election data must remain byte-identical unless an explicit versioned data update is approved.",
+    "Provider secrets must remain server-side and must never be serialized into browser responses.",
+    "Audit metadata is not claimed to be tamper-proof unless durable audit storage is configured.",
+    "No sensitive voter attributes or inferred sensitive profiles are stored in audit events.",
+    "Production domain remains untouched during development steps.",
+    "Current political claims require fresh evidence and provenance.",
+    "Security status must distinguish configured controls from merely planned controls."
+  ],
+  "security_headers": [
+    "X-Content-Type-Options",
+    "X-Frame-Options",
+    "Referrer-Policy",
+    "Permissions-Policy",
+    "Content-Security-Policy",
+    "Cache-Control: no-store"
+  ],
+  "durable_audit": {
+    "binding": "VANDIRA_AUDIT_KV",
+    "retention_days": 30,
+    "optional": true,
+    "status_without_binding": "local_runtime_summary_only"
+  },
+  "compliance_position": "engineering control layer; not legal certification"
+}

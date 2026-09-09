@@ -1,0 +1,24 @@
+{
+  "step": "STEP126",
+  "objective": "AI-to-constituency end-to-end journey refinement",
+  "project_json_files_checked": 79,
+  "json_parse_failures": 0,
+  "js_files_checked": 61,
+  "js_syntax_failures": 0,
+  "html_files_checked": 29,
+  "real_missing_local_html_references": 0,
+  "templated_or_runtime_references_ignored": 1,
+  "inline_scripts_checked": 28,
+  "inline_script_syntax_failures": 0,
+  "script_tag_balance": {
+    "index.html": "pass",
+    "constituency.html": "pass",
+    "ai.html": "pass"
+  },
+  "canonical_data_changed": false,
+  "canonical_hashes": {
+    "data/assembly_canonical_master.json": "195a68687e31981982f32850219907a929ac39d2dbf0a6649a6cf55884bc2944",
+    "data/assembly_2022_master.json": "195a68687e31981982f32850219907a929ac39d2dbf0a6649a6cf55884bc2944"
+  },
+  "browser_visual_test": "not completed; sandbox Chromium navigation is administrator-blocked"
+}

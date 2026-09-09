@@ -1,0 +1,65 @@
+{
+  "version": "1.0",
+  "step": "STEP86",
+  "title": "VANDIRA Official Election Data Connectors",
+  "policy": "Primary-source retrieval first. Existing canonical election/booth JSON remains read-only and is not rewritten by connectors.",
+  "connectors": [
+    {
+      "id": "eci-election-hub",
+      "tier": 1,
+      "authority": "Election Commission of India",
+      "topics": ["assembly elections", "2022 UP election", "results", "candidate data", "statistical reports", "terms of houses"],
+      "urls": [
+        "https://www.eci.gov.in/assembly-election",
+        "https://www.eci.gov.in/statistical-reports",
+        "https://www.eci.gov.in/term-of-the-houses"
+      ],
+      "retrieval_mode": "official-index-discovery"
+    },
+    {
+      "id": "eci-2022-up-detailed-results",
+      "tier": 1,
+      "authority": "Election Commission of India",
+      "topics": ["2022 detailed results", "403 assembly constituencies", "candidate votes", "electors"],
+      "urls": ["https://www.eci.gov.in/assembly-election"],
+      "retrieval_mode": "official-index-discovery",
+      "note": "Connector discovers the current ECI 2022 UP election resources rather than hard-coding transient backend download URLs."
+    },
+    {
+      "id": "ceo-up",
+      "tier": 1,
+      "authority": "Chief Electoral Officer, Uttar Pradesh",
+      "topics": ["electoral rolls", "polling stations", "assembly election", "parliament election", "election notices"],
+      "urls": ["http://ceouttarpradesh.nic.in"],
+      "retrieval_mode": "official-site-health-and-discovery"
+    },
+    {
+      "id": "up-assembly-search",
+      "tier": 1,
+      "authority": "Uttar Pradesh Legislative Assembly",
+      "topics": ["questions", "discussions", "bills", "members", "proceedings"],
+      "urls": ["https://www.upvidhansabhaproceedings.gov.in/search"],
+      "retrieval_mode": "official-index-discovery"
+    },
+    {
+      "id": "up-government-cabinet",
+      "tier": 1,
+      "authority": "Government of Uttar Pradesh — Information & Public Relations Department",
+      "topics": ["cabinet decisions", "government policy", "official announcements"],
+      "urls": ["https://www.information.up.gov.in/en/hi_cabinet-decision-new.aspx"],
+      "retrieval_mode": "official-index-discovery"
+    },
+    {
+      "id": "up-government-cm-releases",
+      "tier": 1,
+      "authority": "Government of Uttar Pradesh — Information & Public Relations Department",
+      "topics": ["CM press releases", "government announcements", "district developments"],
+      "urls": ["https://information.up.gov.in/cm_press_release_details.aspx"],
+      "retrieval_mode": "official-index-discovery"
+    }
+  ],
+  "source_priority": ["tier-1-official", "tier-2-reputable-news", "tier-3-reference", "discovery-lead"],
+  "conflict_policy": "For official facts and election statistics, prefer the latest relevant primary source and expose conflicts instead of silently merging them.",
+  "freshness_policy": "Official live retrieval is supplemental to the immutable local dataset; every live item carries retrieved_at and source_url.",
+  "coverage_note": "STEP86 starts the official connector layer. It does not claim that every public ECI/CEO/Assembly document has already been ingested. The connector discovers and surfaces official resources for subsequent ingestion."
+}

@@ -1,0 +1,40 @@
+{
+  "version": "1.0",
+  "step": "STEP85",
+  "updated_at": "2026-09-08",
+  "coverage_goal": "Build the broadest practical UP election knowledge graph from primary sources first, then reputable reporting and reference sources. This is not a claim of indexing the entire public internet.",
+  "primary_sources": [
+    {"id":"eci","name":"Election Commission of India","tier":1,"topics":["results","statistical reports","Form 20","electoral rolls","house terms","candidate data"],"url":"https://www.eci.gov.in/"},
+    {"id":"eci-statistical","name":"ECI Statistical Reports","tier":1,"topics":["assembly history","constituency results","candidate statistics"],"url":"https://www.eci.gov.in/statistical-reports"},
+    {"id":"eci-index-card","name":"ECI Index Card & Statistical Reporting","tier":1,"topics":["electors","voters","candidates","party","votes","results"],"url":"https://www.eci.gov.in/index-card-statistical-reporting"},
+    {"id":"ceo-up","name":"Chief Electoral Officer, Uttar Pradesh","tier":1,"topics":["assembly elections","parliament elections","electoral rolls","polling stations"],"url":"http://ceouttarpradesh.nic.in"},
+    {"id":"eci-voter","name":"ECI Citizen/Voter Service Portal","tier":1,"topics":["electoral rolls","voter services","election information"],"url":"https://voters.eci.gov.in/"},
+    {"id":"up-assembly","name":"Uttar Pradesh Legislative Assembly","tier":1,"topics":["members","ministers","proceedings","questions","legislative activity"],"url":"https://www.upvidhansabhaproceedings.gov.in/"},
+    {"id":"neva-up","name":"National eVidhan — Uttar Pradesh","tier":1,"topics":["sessions","questions","bills","members","legislative activity"],"url":"https://loksabha.neva.gov.in/Home/Index/UP"},
+    {"id":"up-ipr","name":"Uttar Pradesh Information & Public Relations Department","tier":1,"topics":["government releases","cabinet decisions","schemes","official announcements"],"url":"https://www.information.up.gov.in/en/"},
+    {"id":"up-ipr-cabinet","name":"UP Government Cabinet Decisions","tier":1,"topics":["cabinet decisions","government policy"],"url":"https://www.information.up.gov.in/en/hi_cabinet-decision-new.aspx"},
+    {"id":"up-sec","name":"State Election Commission, Uttar Pradesh","tier":1,"topics":["local body elections","panchayat elections","ULB elections"],"url":"https://sec.up.nic.in/site/"},
+    {"id":"pib","name":"Press Information Bureau","tier":1,"topics":["central government releases","election administration","UP official developments"],"url":"https://www.pib.gov.in/"}
+  ],
+  "news_sources": [
+    {"id":"indian-express","name":"The Indian Express — Political Pulse","tier":2,"topics":["UP politics","2027 election","party strategy"],"url":"https://indianexpress.com/section/political-pulse/","rss":"https://indianexpress.com/section/political-pulse/feed/"},
+    {"id":"new-indian-express-up","name":"The New Indian Express — Uttar Pradesh","tier":2,"topics":["UP politics","government","organisation"],"url":"https://www.newindianexpress.com/states/uttar-pradesh/"},
+    {"id":"moneycontrol-politics","name":"Moneycontrol — Politics","tier":2,"topics":["politics","markets/policy","current developments"],"url":"https://www.moneycontrol.com/news/india/"},
+    {"id":"india-today-up","name":"India Today — Uttar Pradesh Assembly Elections","tier":2,"topics":["2027 election","candidate news","poll developments"],"url":"https://www.indiatoday.in/elections/assembly/uttar-pradesh"}
+  ],
+  "reference_sources": [
+    {"id":"wiki-up","name":"Wikipedia — Uttar Pradesh","tier":3,"url":"https://en.wikipedia.org/wiki/Uttar_Pradesh"},
+    {"id":"wiki-elections-up","name":"Wikipedia — Elections in Uttar Pradesh","tier":3,"url":"https://en.wikipedia.org/wiki/Elections_in_Uttar_Pradesh"},
+    {"id":"wiki-cm-up","name":"Wikipedia — Chief Minister of Uttar Pradesh","tier":3,"url":"https://en.wikipedia.org/wiki/Chief_Minister_of_Uttar_Pradesh"}
+  ],
+  "discovery": [
+    {"id":"google-news-rss","name":"Google News RSS discovery","tier":2,"purpose":"Broad current-news discovery; every result remains attributed to its original publisher.","url":"https://news.google.com/"}
+  ],
+  "source_policy": [
+    "Primary sources win conflicts for official facts and election statistics.",
+    "News sources are reported claims until corroborated when the fact is consequential.",
+    "Reference sources support background and cross-checking, not sole authority for election results.",
+    "Search/discovery results are leads with original publisher attribution, not a new primary source.",
+    "Unverified social posts are never promoted to verified facts without corroboration."
+  ]
+}

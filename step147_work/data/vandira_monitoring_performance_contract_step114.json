@@ -1,0 +1,36 @@
+{
+  "step": 114,
+  "name": "VANDIRA Monitoring + Performance Intelligence",
+  "purpose": "Evidence-based operational observability for the VANDIRA election intelligence runtime.",
+  "dimensions": [
+    "endpoint response latency",
+    "runtime availability",
+    "data health",
+    "AI provider readiness",
+    "live monitoring signal health",
+    "dependency health",
+    "browser-observed performance history"
+  ],
+  "status_model": ["healthy", "degraded", "attention", "unavailable", "not_configured"],
+  "rules": [
+    "Measured latency is reported only when an endpoint was actually probed.",
+    "A slow endpoint is an operational signal, not evidence about political events.",
+    "Provider not configured is distinct from provider failure.",
+    "Current political claims still require fresh retrieval and source attribution.",
+    "Monitoring metrics must not include sensitive voter attributes or profiling.",
+    "Browser performance history is local-first and bounded.",
+    "No synthetic uptime percentage is claimed without an observed sample window."
+  ],
+  "thresholds_ms": {
+    "healthy": 800,
+    "degraded": 1800,
+    "attention": 3500
+  },
+  "provenance": [
+    "VANDIRA system health",
+    "VANDIRA data health",
+    "VANDIRA proactive monitoring",
+    "VANDIRA Political War Room",
+    "browser performance timing"
+  ]
+}

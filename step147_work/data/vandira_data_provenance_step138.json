@@ -1,0 +1,325 @@
+{
+  "version": "STEP138.1",
+  "status": "ADDITIVE_PROVENANCE_LAYER",
+  "policy": "Existing source data is immutable; findings are stored separately as source-vs-derived metadata.",
+  "canonical_files": {
+    "data/assembly_canonical_master.json": {
+      "sha256": "195a68687e31981982f32850219907a929ac39d2dbf0a6649a6cf55884bc2944",
+      "records": 403
+    },
+    "data/assembly_2022_master.json": {
+      "sha256": "195a68687e31981982f32850219907a929ac39d2dbf0a6649a6cf55884bc2944",
+      "records": 403
+    }
+  },
+  "margin_integrity": {
+    "records_checked": 403,
+    "mismatch_count": 13,
+    "mismatches": [
+      {
+        "ac_no": 26,
+        "constituency": "Thakurdwara",
+        "source_margin_votes": 19684,
+        "derived_margin_votes": 19685,
+        "delta": -1
+      },
+      {
+        "ac_no": 54,
+        "constituency": "Muradnagar",
+        "source_margin_votes": 97295,
+        "derived_margin_votes": 97095,
+        "delta": 200
+      },
+      {
+        "ac_no": 74,
+        "constituency": "Chharra",
+        "source_margin_votes": 24327,
+        "derived_margin_votes": 23962,
+        "delta": 365
+      },
+      {
+        "ac_no": 102,
+        "constituency": "Patiyali",
+        "source_margin_votes": 4001,
+        "derived_margin_votes": 3588,
+        "delta": 413
+      },
+      {
+        "ac_no": 119,
+        "constituency": "Meerganj",
+        "source_margin_votes": 32840,
+        "derived_margin_votes": 32480,
+        "delta": 360
+      },
+      {
+        "ac_no": 181,
+        "constituency": "Salon (SC)",
+        "source_margin_votes": 1511,
+        "derived_margin_votes": 2111,
+        "delta": -600
+      },
+      {
+        "ac_no": 195,
+        "constituency": "Bhojpur",
+        "source_margin_votes": 27468,
+        "derived_margin_votes": 27458,
+        "delta": 10
+      },
+      {
+        "ac_no": 264,
+        "constituency": "Bara (SC)",
+        "source_margin_votes": 12464,
+        "derived_margin_votes": 12524,
+        "delta": -60
+      },
+      {
+        "ac_no": 281,
+        "constituency": "Akbarpur",
+        "source_margin_votes": 12336,
+        "derived_margin_votes": 11796,
+        "delta": 540
+      },
+      {
+        "ac_no": 299,
+        "constituency": "Tarabganj",
+        "source_margin_votes": 53690,
+        "derived_margin_votes": 53960,
+        "delta": -270
+      },
+      {
+        "ac_no": 313,
+        "constituency": "Khalilabad",
+        "source_margin_votes": 12262,
+        "derived_margin_votes": 12622,
+        "delta": -360
+      },
+      {
+        "ac_no": 316,
+        "constituency": "Nautanwa",
+        "source_margin_votes": 15691,
+        "derived_margin_votes": 15871,
+        "delta": -180
+      },
+      {
+        "ac_no": 327,
+        "constituency": "Bansgaon (SC)",
+        "source_margin_votes": 32209,
+        "derived_margin_votes": 32309,
+        "delta": -100
+      }
+    ]
+  },
+  "party_summary_reconciliation": {
+    "winner_records_checked": 403,
+    "summary_rows": 254,
+    "winner_seat_sum": 403,
+    "summary_seat_sum": 397,
+    "mismatches": [
+      {
+        "party": "JDL",
+        "winner_record_count": 2,
+        "summary_seats_won": 0,
+        "delta": 2
+      },
+      {
+        "party": "NISHAD",
+        "winner_record_count": 6,
+        "summary_seats_won": 0,
+        "delta": 6
+      }
+    ],
+    "duplicate_party_names": {
+      "AAP": 2,
+      "ASP": 3,
+      "BDP": 2,
+      "VIP": 2,
+      "RASHTRIYAJAN": 3,
+      "BVD": 2,
+      "AKHILBHARTIY": 3
+    },
+    "normalization_notes": [
+      "Summary and canonical winner-party labels may use different aliases; no source row is rewritten."
+    ]
+  },
+  "form20_provenance": {
+    "verified_acs": 400,
+    "verified_booth_records": 14000,
+    "source_gaps": [
+      55,
+      56,
+      281
+    ],
+    "gap_status": "FINAL_VERIFIED_400_OF_403",
+    "candidate_sum_mismatch_flags": 2573,
+    "candidate_sum_mismatch_acs": [
+      12,
+      14,
+      15,
+      16,
+      25,
+      28,
+      29,
+      31,
+      32,
+      39,
+      42,
+      44,
+      49,
+      50,
+      53,
+      62,
+      80,
+      81,
+      83,
+      85,
+      114,
+      116,
+      137,
+      138,
+      139,
+      140,
+      142,
+      144,
+      155,
+      160,
+      163,
+      170,
+      178,
+      180,
+      182,
+      189,
+      190,
+      191,
+      205,
+      206,
+      207,
+      208,
+      211,
+      219,
+      223,
+      224,
+      225,
+      226,
+      227,
+      230,
+      253,
+      262,
+      269,
+      275,
+      280,
+      305,
+      308,
+      309,
+      310,
+      324,
+      328,
+      357,
+      358,
+      359,
+      360,
+      361,
+      362,
+      364,
+      372,
+      383,
+      384,
+      385,
+      386,
+      387,
+      388,
+      389,
+      390,
+      391,
+      398,
+      400,
+      402
+    ],
+    "votes_gt_electors_flags": 298,
+    "votes_gt_electors_acs": [
+      26,
+      35,
+      41,
+      51,
+      54,
+      57,
+      61,
+      64,
+      66,
+      84,
+      99,
+      111,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      135,
+      146,
+      149,
+      150,
+      151,
+      156,
+      157,
+      158,
+      161,
+      163,
+      168,
+      174,
+      175,
+      177,
+      179,
+      185,
+      186,
+      187,
+      201,
+      221,
+      222,
+      235,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      255,
+      257,
+      260,
+      261,
+      278,
+      289,
+      318,
+      392,
+      393,
+      394
+    ]
+  },
+  "booth_coverage": {
+    "expected_acs": 403,
+    "verified_form20_acs": 400,
+    "missing_form20_acs": [
+      55,
+      56,
+      281
+    ]
+  },
+  "trust_levels": {
+    "canonical_2022_result": "SOURCE_VERIFIED_IMMUTABLE",
+    "derived_margin": "DERIVED_DO_NOT_OVERWRITE_SOURCE",
+    "form20_verified": "SOURCE_VERIFIED_SUBSET",
+    "form20_gap": "SOURCE_UNAVAILABLE_NOT_FABRICATED",
+    "party_summary_reconciliation": "RECONCILIATION_METADATA_ONLY",
+    "2024_lok_sabha_segment": "SEPARATE_ELECTION_CONTEXT"
+  },
+  "ai_policy": [
+    "Prefer canonical source values when answering historical result questions.",
+    "Never silently replace source margin with arithmetic margin; if both matter, label source and derived values separately.",
+    "Treat Form20 gaps as unavailable evidence, never as zero.",
+    "Treat party-summary reconciliation as metadata, not a replacement for winner records.",
+    "Do not label 2024 Lok Sabha assembly-segment data as 2024 Assembly election data."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "step":"STEP93",
+  "purpose":"Deterministic QA contract for VANDIRA AI runtime, entity resolution and candidate intelligence.",
+  "tests":[
+    {"id":"T01","language":"hi","query":"2022 में लखनऊ उत्तर का परिणाम क्या था?","expected_route":"election_results"},
+    {"id":"T02","language":"hi","query":"लखनऊ उत्तर के उम्मीदवार कौन थे?","expected_route":"candidate_intelligence"},
+    {"id":"T03","language":"mr","query":"252 मतदारसंघातील बूथची माहिती द्या","expected_route":"booth_intelligence"},
+    {"id":"T04","language":"hi","query":"UP में आज की राजनीतिक खबर क्या है?","expected_route":"political_news"},
+    {"id":"T05","language":"hi","query":"2027 में कौन जीतेगा?","expected_route":"election_forecast"},
+    {"id":"T06","language":"hi","query":"UP cabinet की latest जानकारी","expected_route":"government_policy"}
+  ],
+  "rules":["No candidate identity is inferred from sensitive attributes.","No forecast is stated as fact.","2024 Lok Sabha data is never labelled as 2024 Assembly data.","Missing evidence is reported as a data gap.","API keys remain server-side. "]
+}

@@ -1,0 +1,74 @@
+{
+  "dataset": "VANDIRA UP Politics Live Feed Snapshot",
+  "captured_at": "2026-09-08T16:25:00+05:30",
+  "status": "snapshot",
+  "note": "Current political updates captured from public sources. This is not a forecast and does not replace a live server connector.",
+  "items": [
+    {
+      "id": "up-politics-20260908-01",
+      "published_at": "2026-09-08T07:20:00+05:30",
+      "headline": "Congress faces a fresh seat-sharing and state-unit coordination test in Uttar Pradesh ahead of 2027",
+      "summary": "Indian Express reports that the Congress-SP seat-sharing arrangement remains to be formalised and that differences between state president Ajay Rai and AICC in-charge Rajendra Pal Gautam are drawing attention.",
+      "category": "Alliance & Organisation",
+      "source": "Indian Express",
+      "source_url": "https://indianexpress.com/article/political-pulse/after-punjab-congress-high-command-faces-another-test-in-poll-bound-uttar-pradesh-10867643/",
+      "source_type": "news",
+      "confidence": "reported"
+    },
+    {
+      "id": "up-politics-20260908-02",
+      "published_at": "2026-09-08T05:45:00+05:30",
+      "headline": "SP plans a blue visual identity for its student wing ahead of 2027",
+      "summary": "Indian Express reports that the Samajwadi Party is planning to use blue for its student wing, a move discussed in the context of expanding outreach towards Dalit and Ambedkarite constituencies.",
+      "category": "Party Strategy",
+      "source": "Indian Express",
+      "source_url": "https://indianexpress.com/article/political-pulse/from-red-to-blue-samajwadi-party-plans-new-look-for-its-student-wing-heres-why-10867639/",
+      "source_type": "news",
+      "confidence": "reported"
+    },
+    {
+      "id": "up-politics-20260908-03",
+      "published_at": "2026-09-08T00:00:00+05:30",
+      "headline": "Yogi Adityanath intensifies outreach in 115 Assembly constituencies",
+      "summary": "Indian Express reports that the Chief Minister has visited more than 44 of UP's 75 districts since May for projects covering 115 Assembly constituencies, with the report linking the outreach to the 2027 election strategy.",
+      "category": "Government & Election Preparation",
+      "source": "Indian Express",
+      "source_url": "https://indianexpress.com/article/political-pulse/yogi-adityanath-uttar-predash-polls-2027-sp-congress-seats-10867666/",
+      "source_type": "news",
+      "confidence": "reported"
+    },
+    {
+      "id": "up-politics-20260907-01",
+      "published_at": "2026-09-07T08:17:00+05:30",
+      "headline": "BJP begins a more structured organisational preparation cycle for the 2027 UP election",
+      "summary": "New Indian Express reports that BJP UP in-charge Vinod Tawde met Yogi Adityanath and senior leaders as organisational meetings begin, with booth-level preparation highlighted.",
+      "category": "Organisation",
+      "source": "The New Indian Express",
+      "source_url": "https://www.newindianexpress.com/specials/2026/Sep/07/bjp-shifts-into-election-mode-in-up-as-vinod-tawde-meets-yogi-organisational-meetings-begin",
+      "source_type": "news",
+      "confidence": "reported"
+    },
+    {
+      "id": "up-politics-20260901-01",
+      "published_at": "2026-09-01T15:33:00+05:30",
+      "headline": "AI-generated political video triggers a BJP-SP row in Uttar Pradesh",
+      "summary": "Moneycontrol reports a political controversy around an AI-generated video shown at an SP press conference, with both sides trading allegations as activity increases ahead of the 2027 election.",
+      "category": "Political Communication",
+      "source": "Moneycontrol",
+      "source_url": "https://www.moneycontrol.com/news/india/sp-s-ai-video-targeting-yogi-sparks-row-bjp-hits-back-14019887.html",
+      "source_type": "news",
+      "confidence": "reported"
+    },
+    {
+      "id": "up-gov-20260825-01",
+      "published_at": "2026-08-25T00:00:00+05:30",
+      "headline": "UP Cabinet publishes latest decision bulletin",
+      "summary": "The Uttar Pradesh Information & Public Relations Department lists a Council of Ministers decision bulletin dated 25 August 2026.",
+      "category": "Government",
+      "source": "Government of Uttar Pradesh — Information & Public Relations Department",
+      "source_url": "https://information.up.gov.in/en/hi_cabinet-decision-new.aspx",
+      "source_type": "official",
+      "confidence": "official"
+    }
+  ]
+}

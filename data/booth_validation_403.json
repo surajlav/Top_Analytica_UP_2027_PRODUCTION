@@ -1,0 +1,16 @@
+{
+  "canonical_ac_coverage": 403,
+  "booth_available": 394,
+  "booth_source_not_available": [
+    56,
+    72,
+    115,
+    160,
+    176,
+    187,
+    289,
+    331,
+    381
+  ],
+  "note": "Available booth data is mapped to canonical AC number/name. Missing sources are intentionally shown as Source Not Available. Historical/result data must not be inferred from filename-only mapping."
+}

@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "step": "STEP85",
+  "pipeline": [
+    {"stage":1,"name":"Discover","action":"Search/fetch relevant official, legislative and reputable-news sources."},
+    {"stage":2,"name":"Normalize","action":"Convert source records to a common document contract."},
+    {"stage":3,"name":"Map","action":"Map AC, district, Lok Sabha, party and candidate only when deterministic."},
+    {"stage":4,"name":"Validate","action":"Reject malformed records; preserve unknown mappings as null."},
+    {"stage":5,"name":"Deduplicate","action":"Use canonical URL/title/date fingerprints; never duplicate source claims."},
+    {"stage":6,"name":"Rank","action":"Prefer tier 1 sources, then corroborated tier 2, then reference material."},
+    {"stage":7,"name":"Retrieve","action":"Build a small context pack for each user query instead of sending the entire corpus to the model."},
+    {"stage":8,"name":"Generate","action":"Answer only from retrieved evidence and canonical local context; expose gaps."},
+    {"stage":9,"name":"Audit","action":"Return retrieval trace, source timestamps and connector/provider status."}
+  ],
+  "freshness_policy": {
+    "live_questions":"retrieve on request",
+    "current_politics":"prefer <= 24h results; disclose older evidence",
+    "election_history":"canonical local dataset is authoritative until superseded by verified official correction",
+    "booth_data":"use packaged verified Form20 dataset; do not overwrite with web content"
+  }
+}

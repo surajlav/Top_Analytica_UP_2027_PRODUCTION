@@ -1,0 +1,11 @@
+{
+  "step": "STEP109",
+  "name": "VANDIRA Communication / Content Studio",
+  "purpose": "Evidence-led public communication drafting with provenance and human fact-check gates.",
+  "content_types": ["briefing","press_note","social_post","public_statement","faq","issue_explainer","constituency_update"],
+  "workflow": ["select_type","define_topic","attach_verified_evidence","draft","fact_check","human_review","approve","publish_ready"],
+  "evidence_rules": ["No invented statistics or claims","Attach source and date where available","Distinguish reported claims from verified facts","Do not convert news frequency into public opinion","Do not use 2027 outcome predictions as facts"],
+  "safety": ["public/non-targeted communication","no sensitive demographic targeting","no microtargeting","no fabricated endorsements","no fabricated poll results","human approval required before publishing"],
+  "languages": ["hi","en","mr","te","ta","bn","gu","kn","ml","pa","or","as"],
+  "status_model": ["draft","fact-check-required","approved","publish-ready"]
+}

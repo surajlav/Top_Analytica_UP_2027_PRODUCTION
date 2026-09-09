@@ -1,0 +1,10 @@
+{
+  "schema_version":"step107.1",
+  "name":"VANDIRA Scenario & Decision Support",
+  "purpose":"Convert verified historical/current evidence into explicit conditional scenarios and bounded decision-support questions without presenting unsupported election outcomes as forecasts.",
+  "pipeline":["validate_context","load_baseline","identify_change_drivers","build_conditional_scenarios","assess_impact","identify_risks","identify_opportunities","define_response_questions","attach_evidence_requirements","audit"],
+  "scenario_drivers":["political_change","alliance_change","candidate_change","major_issue_or_narrative_shift"],
+  "decision_framework":["Impact","Risk","Opportunity","Response"],
+  "outputs":["baseline","scenario_matrix","what_to_watch","evidence_needed","guardrails","provenance"],
+  "guardrails":{"no_invented_probability":true,"no_2027_winner_prediction":true,"no_sensitive_demographic_inference":true,"alliance_requires_verification":true,"2024_lok_sabha_is_not_2024_assembly":true,"scenarios_are_conditional":true}
+}

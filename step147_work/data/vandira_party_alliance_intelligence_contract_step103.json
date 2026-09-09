@@ -1,0 +1,18 @@
+{
+  "schema_version":"step103.1",
+  "title":"VANDIRA Party & Alliance Intelligence Contract",
+  "scope":"Uttar Pradesh Assembly Election 2027 political intelligence",
+  "principles":[
+    "2022 Assembly and 2024 Lok Sabha evidence remain separate",
+    "Historical performance is descriptive and is not a 2027 forecast",
+    "Current alliance or seat-sharing claims require fresh evidence",
+    "Primary official evidence outranks reported news when conflicts occur",
+    "No alliance is inferred merely from historical co-contesting or vote patterns",
+    "Party/candidate facts retain provenance and confidence",
+    "Sensitive voter attributes are not inferred or targeted"
+  ],
+  "domains":["party_identity","assembly_2022_performance","lok_sabha_2024_context","constituency_footprint","candidate_presence","alliance_relationships","current_political_signals","evidence","assessment","gaps"],
+  "alliance_states":["verified_current","reported","historical","rumored_or_unverified","unknown"],
+  "answer_protocol":["स्थिति","सत्यापित तथ्य","ऐतिहासिक प्रदर्शन","वर्तमान राजनीतिक संकेत","गठबंधन स्थिति","विश्लेषण","जोखिम / अनिश्चितता","VANDIRA मूल्यांकन","अगला कदम","स्रोत"],
+  "safety":"Party and alliance analysis is organizational/political intelligence; do not infer sensitive personal attributes or use them for targeted persuasion."
+}

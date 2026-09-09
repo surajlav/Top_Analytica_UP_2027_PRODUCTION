@@ -1,0 +1,17 @@
+{
+  "step": "STEP132",
+  "json_files": 85,
+  "json_valid": 85,
+  "json_failures": [],
+  "js_files": 61,
+  "js_syntax_pass": 61,
+  "js_failures": [],
+  "html_files": 29,
+  "script_balance_failures": [],
+  "canonical_sha256": {
+    "data/assembly_canonical_master.json": "195a68687e31981982f32850219907a929ac39d2dbf0a6649a6cf55884bc2944",
+    "data/assembly_2022_master.json": "195a68687e31981982f32850219907a929ac39d2dbf0a6649a6cf55884bc2944"
+  },
+  "browser_visual_test": "not completed: sandbox Chromium navigation is administrator-blocked",
+  "data_mutation": "none intended"
+}

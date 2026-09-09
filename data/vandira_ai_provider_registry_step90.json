@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "step": "STEP90",
+  "title": "VANDIRA Multi-Provider AI Runtime Registry",
+  "purpose": "Connect VANDIRA to multiple server-side AI providers with automatic fallback, while keeping election evidence retrieval independent from model choice.",
+  "providers": [
+    {"id":"cloudflare","name":"Cloudflare Workers AI","free_note":"Workers AI currently includes a daily free allocation on the Workers Free plan; availability is model-specific.","env":["CF_ACCOUNT_ID","CF_API_TOKEN","CF_AI_MODEL"],"default_model":"@cf/openai/gpt-oss-20b","docs":"https://developers.cloudflare.com/workers-ai/"},
+    {"id":"gemini","name":"Google Gemini API","free_note":"Google publishes free-tier model availability and limits; exact quotas can change.","env":["GEMINI_API_KEY","GEMINI_MODEL"],"default_model":"gemini-2.5-flash-lite","docs":"https://ai.google.dev/gemini-api/docs/pricing"},
+    {"id":"groq","name":"Groq API","free_note":"Groq publishes Free Plan rate limits by model; exact limits are account/model dependent.","env":["GROQ_API_KEY","GROQ_MODEL"],"default_model":"openai/gpt-oss-20b","docs":"https://console.groq.com/docs/rate-limits"},
+    {"id":"openrouter","name":"OpenRouter","free_note":"OpenRouter offers free models and an openrouter/free router, with free-model request limits.","env":["OPENROUTER_API_KEY","OPENROUTER_MODEL"],"default_model":"openrouter/free","docs":"https://openrouter.ai/docs/faq"},
+    {"id":"custom","name":"Custom OpenAI-compatible provider","free_note":"Optional compatibility path for another provider or self-hosted endpoint.","env":["AI_BASE_URL","AI_API_KEY","AI_MODEL"],"default_model":"gpt-4o-mini","docs":null}
+  ],
+  "routing_policy": [
+    "Election evidence retrieval is model-independent and runs before synthesis.",
+    "Prefer configured provider in explicit request mode; otherwise use automatic cascade.",
+    "A provider failure or quota error falls back to the next configured provider.",
+    "No provider is allowed to invent missing election facts.",
+    "Provider credentials are never exposed to client code.",
+    "Free-tier status is not treated as a permanent guarantee."
+  ]
+}

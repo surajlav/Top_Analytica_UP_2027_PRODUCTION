@@ -1,0 +1,16 @@
+{
+  "name": "TOP Analytica — VANDIRA",
+  "short_name": "VANDIRA",
+  "description": "Uttar Pradesh political intelligence workspace",
+  "lang": "hi",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f7faff",
+  "theme_color": "#082454",
+  "icons": [
+    {"src":"assets/top-analytica-logo.jpg","sizes":"512x512","type":"image/jpeg","purpose":"any maskable"}
+  ]
+}

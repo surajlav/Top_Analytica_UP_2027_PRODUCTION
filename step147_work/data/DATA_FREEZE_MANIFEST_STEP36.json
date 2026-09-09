@@ -1,0 +1,169 @@
+{
+  "version": "1.0",
+  "status": "FROZEN_BASE_DATA",
+  "base_package": "Top_Analytica_UP_2027_STEP29_SELECTED_PARTY_FIRST_BOOTH_TABLE.zip",
+  "created": "2026-09-07",
+  "rule": "Existing data files are read-only. Future datasets must be additive and must not overwrite these files.",
+  "files": [
+    {
+      "path": "data/assembly_2022_master.json",
+      "sha256": "195a68687e31981982f32850219907a929ac39d2dbf0a6649a6cf55884bc2944",
+      "bytes": 246640
+    },
+    {
+      "path": "data/assembly_2022_party_summary.json",
+      "sha256": "dc2ec27efddf092e6a448f8a2e537e1d955e0d5a93a74b8bf2086a0d8f241bae",
+      "bytes": 21907
+    },
+    {
+      "path": "data/assembly_canonical_master.json",
+      "sha256": "195a68687e31981982f32850219907a929ac39d2dbf0a6649a6cf55884bc2944",
+      "bytes": 246640
+    },
+    {
+      "path": "data/booth_ac_001_050.json",
+      "sha256": "833c75e37c9d20b5f8d6766fd30197f01a92719996f99eae62ba085d2d6ba547",
+      "bytes": 178025
+    },
+    {
+      "path": "data/booth_ac_051_100.json",
+      "sha256": "1c4063a00ee75a2e3a26cfc9af7107719c9e1e0d7f998cc032ba8d2b166fffb3",
+      "bytes": 165988
+    },
+    {
+      "path": "data/booth_ac_101_150.json",
+      "sha256": "bf1ee5076f8a70856847a08d482783d2a7d233ab9d57e2ccc110c71200abd7e1",
+      "bytes": 194656
+    },
+    {
+      "path": "data/booth_ac_151_200.json",
+      "sha256": "356b8c3c8e61421e694d69072ade6b92686ee5c8735426c7f17cd48cb8a158ef",
+      "bytes": 165748
+    },
+    {
+      "path": "data/booth_ac_201_250.json",
+      "sha256": "a97e25198a5bcc3645e92fedcb8e573148873c660f2e2a70777d1f895f4e73e3",
+      "bytes": 199286
+    },
+    {
+      "path": "data/booth_ac_251_300.json",
+      "sha256": "d81eba1904e545fe7dadfe37f3caa4f4af13f8528ed1c87ccae00880cd2b6e9d",
+      "bytes": 179058
+    },
+    {
+      "path": "data/booth_ac_301_350.json",
+      "sha256": "a98bd59b48b73d08fbc82686c55d467cf843b9cbba782af150461cce8e217ef1",
+      "bytes": 167014
+    },
+    {
+      "path": "data/booth_ac_351_400.json",
+      "sha256": "c9016033ef7f0ef2199cb07774394172c9bc3c762136e1699930229c58853d03",
+      "bytes": 158005
+    },
+    {
+      "path": "data/booth_ac_401_403.json",
+      "sha256": "2656c5aad0b97dce5bad889ca2fc94ec1bd99a082d7533c33413e95871c3773b",
+      "bytes": 11811
+    },
+    {
+      "path": "data/booth_chunks_manifest.json",
+      "sha256": "ecf0ddbebc6979f2124e30e9af7a40e32a8203842df6e77cac3654bfd684fcdc",
+      "bytes": 547
+    },
+    {
+      "path": "data/booth_validation_403.json",
+      "sha256": "c625a66c9b7db830355a3d7422db13b0a07ab6b950b4dc9df832d8450c8f1e37",
+      "bytes": 387
+    },
+    {
+      "path": "data/candidate_party_mapping_2022.json",
+      "sha256": "ad76ef1878475177fe3f5bb1888ea0a1ff595d7b462fd7eeda37422f8d1e4635",
+      "bytes": 172687
+    },
+    {
+      "path": "data/form20_83_gap_integration_registry.json",
+      "sha256": "9335eeda0bfe6ffc693e38d17b683e23fc72ffe0638cc34b5562d052ca28ebf2",
+      "bytes": 1837
+    },
+    {
+      "path": "data/form20_booth_intelligence_2022_001_050.json",
+      "sha256": "8eb497252acf7b436b83f084f4055ecafb42aad0677b2b34922f6a769f97b292",
+      "bytes": 2671784
+    },
+    {
+      "path": "data/form20_booth_intelligence_2022_051_100.json",
+      "sha256": "9bbc41877039fb2f62d5db8b5273fbc29498206ef3c4ce1a47b8596d41303b6f",
+      "bytes": 2434031
+    },
+    {
+      "path": "data/form20_booth_intelligence_2022_101_150.json",
+      "sha256": "4e1b4d5efb8697f87f005991ec1dabaaa0f61f6a5b0c52e262161880dfd6b771",
+      "bytes": 2624832
+    },
+    {
+      "path": "data/form20_booth_intelligence_2022_151_200.json",
+      "sha256": "7ce2b22ba49b323090e9b0037e2462be38cf2bf26bef23ad75b1378dd1ae9e54",
+      "bytes": 2635307
+    },
+    {
+      "path": "data/form20_booth_intelligence_2022_201_250.json",
+      "sha256": "3f86d69a757314dc89161a4a29046b7be2c01d47869d3b8e04e1760e3b86fcbf",
+      "bytes": 2679210
+    },
+    {
+      "path": "data/form20_booth_intelligence_2022_251_300.json",
+      "sha256": "40bd1e712320d145aeb48e465795e71146600efbd9116f6d1986639a4ff68f3c",
+      "bytes": 2647822
+    },
+    {
+      "path": "data/form20_booth_intelligence_2022_301_350.json",
+      "sha256": "e0975e03ab0197e4cc665faa42cc004ec6891ad133ea1c0504f063d96fea32f8",
+      "bytes": 2723222
+    },
+    {
+      "path": "data/form20_booth_intelligence_2022_351_400.json",
+      "sha256": "86880d530da6f990d7234c9d631c83056befb9a0298399c1553cff5afae13063",
+      "bytes": 2696815
+    },
+    {
+      "path": "data/form20_booth_intelligence_2022_401_403.json",
+      "sha256": "4f4568325d5254a0c629dc4e5ff00368e6880e2abe37e1084e6834eabb5159db",
+      "bytes": 140832
+    },
+    {
+      "path": "data/form20_booth_intelligence_manifest_2022.json",
+      "sha256": "3ea00945c426fb2ec811d381748f8f810991d9bb0144888940298eb5227adead",
+      "bytes": 2200
+    },
+    {
+      "path": "data/form20_candidate_map_2022.json",
+      "sha256": "d1169ded56b4d925510feacdc08425d59d4c072613ca2cd3c5051719ff4b5b30",
+      "bytes": 509064
+    },
+    {
+      "path": "data/form20_data_quality_audit_2022.json",
+      "sha256": "35ba0ae8781c6340d27c498dd75c82b413e9997634b3815468a598cfa9bb8ea5",
+      "bytes": 59617
+    },
+    {
+      "path": "data/form20_integration_audit_2022.json",
+      "sha256": "0c15e1b408ab4198c535ea0dd73cea3e6cf9fd4c3b5421a90627117f93ef44f6",
+      "bytes": 1081
+    },
+    {
+      "path": "data/historical_assembly_2012_2017.json",
+      "sha256": "d0083110abb97160e4d4872cd720398cbcf97767bf8c4124d2921a7639651cad",
+      "bytes": 225443
+    },
+    {
+      "path": "data/lok_sabha_2024_assembly_segment_results.json",
+      "sha256": "933d1d40ba6534ba11bbbdfd24a89aee79f58985c34a8269bfc5541acfcd52ba",
+      "bytes": 157246
+    },
+    {
+      "path": "data/lok_sabha_2024_party_summary.json",
+      "sha256": "5f1f311fe7e70e73a7f6e73b47c8950cd0cee4ee0cf1aa4b2f9227122d80ac0d",
+      "bytes": 14235
+    }
+  ]
+}

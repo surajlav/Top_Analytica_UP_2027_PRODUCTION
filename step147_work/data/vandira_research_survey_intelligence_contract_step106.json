@@ -1,0 +1,17 @@
+{
+  "step": "STEP106",
+  "name": "VANDIRA Research & Survey Intelligence",
+  "purpose": "Separate electoral facts, scientific survey evidence, field reports, media signals and AI analysis; assess survey metadata before use.",
+  "research_dimensions": ["research_question","geography","population","sample","sampling_method","fieldwork_period","questionnaire","weighting","margin_of_error","sponsor","provenance"],
+  "evidence_classes": ["official_data","scientific_survey","field_report","media_signal","discovery_lead","ai_analysis"],
+  "quality_checks": ["sample_size","constituency_coverage","fieldwork_date","methodology","weighting_documented","questionnaire_available","margin_of_error","sponsor_disclosed"],
+  "grades": {"high":"85-100","medium":"65-84","low":"40-64","insufficient":"0-39"},
+  "guardrails": [
+    "survey_not_equal_to_election_result",
+    "no_claim_of_representativeness_without_sampling_frame",
+    "no_sensitive_demographic_inference",
+    "no_voter_profiling",
+    "no_2027_outcome_prediction_from_survey_metadata_alone"
+  ],
+  "storage_policy": "STEP106 does not embed fabricated survey responses. Survey datasets require source metadata and provenance before ingestion."
+}

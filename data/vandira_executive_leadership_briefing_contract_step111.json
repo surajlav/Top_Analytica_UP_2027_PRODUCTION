@@ -1,0 +1,9 @@
+{
+  "step":"STEP111",
+  "name":"VANDIRA Executive / Leadership Briefing",
+  "purpose":"Convert the Political Situation Room evidence picture into a concise leadership decision-support brief.",
+  "sections":["what_changed","where","why_it_matters","electoral_context","what_requires_attention","risk","opportunity","next_actions","data_gaps","sources"],
+  "workflow":["retrieve_situation_room","retrieve_daily_briefing","prioritize_signals","separate_fact_from_analysis","identify_risk_and_opportunity","prepare_next_actions","attach_provenance","human_review"],
+  "rules":["Current claims require fresh evidence","Reported claims remain attributed until verified","2024 Lok Sabha context is never treated as a 2024 Assembly result","No unsupported 2027 winner prediction or probability","No sensitive voter profiling or targeting","Leadership brief is decision support, not autonomous decision-making"],
+  "output":"Executive-grade concise intelligence brief"
+}

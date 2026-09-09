@@ -1,0 +1,14 @@
+{
+  "version":"1.0",
+  "step":"STEP112",
+  "title":"VANDIRA State → Region → District → Assembly → Booth Intelligence",
+  "purpose":"Connected hierarchical navigation from Uttar Pradesh state to region, district, Assembly constituency and source-dependent booth intelligence.",
+  "hierarchy":["state","region","district","assembly","booth"],
+  "coverage":{"state":1,"regions":18,"districts":75,"assembly_constituencies":403},
+  "verified_baseline":{"election_year":2022,"warehouse":"data/eci_assembly_2022_warehouse_step89.json"},
+  "region_model":"18 conventional Uttar Pradesh administrative divisions mapped to the 75 districts represented in the canonical 2022 Assembly warehouse.",
+  "booth_rule":"Assembly-level booth totals are retained from the verified warehouse; detailed booth records are source-dependent and may be preview/partial.",
+  "freshness":"Current 2027 intelligence is not inferred from 2022 hierarchy data and requires fresh evidence.",
+  "guardrails":["No sensitive voter profiling","No sensitive attribute targeting","No unsupported 2027 forecast","No 2024 Lok Sabha/Assembly conflation","Do not represent partial booth previews as complete booth universes"],
+  "provenance":["data/eci_assembly_2022_warehouse_step89.json","data/booth_ac_*.json"]
+}

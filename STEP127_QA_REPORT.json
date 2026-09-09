@@ -1,0 +1,14 @@
+{
+  "all_json_files": 82,
+  "json_failures": [],
+  "js_files": 61,
+  "js_failures": [],
+  "html_files": 29,
+  "missing_static_local_refs": [],
+  "script_tag_balance_failures": [],
+  "inline_script_failures": [],
+  "canonical_data_hashes": {
+    "assembly_canonical_master.json": "195a68687e31981982f32850219907a929ac39d2dbf0a6649a6cf55884bc2944",
+    "assembly_2022_master.json": "195a68687e31981982f32850219907a929ac39d2dbf0a6649a6cf55884bc2944"
+  }
+}

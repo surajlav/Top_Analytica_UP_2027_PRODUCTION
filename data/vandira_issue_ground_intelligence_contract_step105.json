@@ -1,0 +1,11 @@
+{
+  "step":"STEP105",
+  "name":"VANDIRA Issue & Ground Intelligence",
+  "purpose":"Evidence-grounded issue and ground-signal layer for Uttar Pradesh Assembly Election 2027.",
+  "inputs":["current political/news evidence","official source discovery","2022 Assembly normalized warehouse","future verified field reports and survey datasets when available"],
+  "outputs":["issue signals","constituency issue evidence leads","ground intelligence status","data gaps","provenance","confidence guardrails"],
+  "issue_domains":["infrastructure","employment","agriculture","education","health","governance","law_and_order","prices_and_cost"],
+  "rules":["News mentions are evidence leads, not constituency-wide public opinion measurements","Do not claim an issue is the top voter priority without survey or representative ground evidence","No sensitive demographic inference or voter profiling","Current claims require fresh retrieval","Historical election results remain separate from issue evidence","No 2027 winner prediction"],
+  "ground_data_status":"No verified constituency ground-report or scientific survey dataset is embedded in STEP105; future datasets must carry source, geography, date, methodology and provenance metadata.",
+  "recommended_consultant_sequence":["resolve constituency","retrieve current issue signals","retrieve official local-development evidence","check for verified field/survey data","separate evidence leads from measured public opinion","assess confidence and gaps","prepare bounded assessment"]
+}

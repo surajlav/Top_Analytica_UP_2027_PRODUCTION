@@ -1,0 +1,54 @@
+{
+  "schema_version": "step97.1",
+  "name": "VANDIRA Evidence & Recommendation Protocol",
+  "purpose": "Convert retrieved evidence into an auditable confidence assessment, explicit conflicts/gaps, and a bounded next-best research or consultant action.",
+  "pipeline": [
+    "normalize_evidence",
+    "deduplicate",
+    "score_source_quality",
+    "check_freshness",
+    "check_source_mix",
+    "detect_conflicts",
+    "assess_sufficiency",
+    "separate_fact_from_analysis",
+    "prepare_assessment",
+    "prepare_next_best_action",
+    "attach_guardrails",
+    "emit_audit"
+  ],
+  "confidence_policy": {
+    "high": "At least two aligned relevant evidence items with tier-1 primary or structured support and no unresolved conflict.",
+    "medium": "One strong primary/structured source or multiple reputable secondary sources without unresolved conflict.",
+    "low": "No authoritative evidence, insufficient breadth, stale evidence for a current claim, or unresolved material conflict."
+  },
+  "recommendation_policy": {
+    "principle": "Recommend the next evidence-backed research or operational information step, not an unsupported political outcome.",
+    "blocked_when": [
+      "no relevant evidence",
+      "material unresolved conflict",
+      "current claim has no fresh evidence"
+    ],
+    "forecast_rule": "Forecasts are scenario analyses with assumptions; never invent probabilities or certainty.",
+    "political_safety": "Do not use sensitive personal attributes for political targeting or persuasion."
+  },
+  "source_priority": [
+    "ECI and other official primary sources",
+    "VANDIRA verified structured datasets",
+    "official UP government/Assembly records",
+    "reputable attributable reporting",
+    "reference/discovery sources"
+  ],
+  "outputs": [
+    "confidence",
+    "evidence_sufficiency",
+    "source_mix",
+    "freshness",
+    "strengths",
+    "conflicts",
+    "gaps",
+    "assessment_summary",
+    "recommendation",
+    "guardrails",
+    "audit"
+  ]
+}

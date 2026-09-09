@@ -1,0 +1,25 @@
+{
+  "release": "STEP125_VANDIRA_AI_FIRST_HOMEPAGE",
+  "scope": ["homepage AI visibility", "AI-first journey", "typography/readability"],
+  "data_changed": false,
+  "canonical_sha256": {
+    "data/assembly_canonical_master.json": "195a68687e31981982f32850219907a929ac39d2dbf0a6649a6cf55884bc2944",
+    "data/assembly_2022_master.json": "195a68687e31981982f32850219907a929ac39d2dbf0a6649a6cf55884bc2944"
+  },
+  "json_files": {"checked": 79, "parse_failures": 0},
+  "js_files": {"checked": 61, "syntax_failures": 0},
+  "html_pages": {"checked": 29, "http_200": 29},
+  "ai_html_script_tags": {"open": 11, "close": 11},
+  "notes": [
+    "Local reference checker reported five false positives caused by JavaScript template-expression strings; all corresponding runtime links are generated dynamically.",
+    "Pixel-perfect browser rendering was not claimed because sandbox Chromium navigation is administrator-blocked."
+  ],
+  "changes": [
+    "Visible VANDIRA AI CTA added to homepage navigation.",
+    "Hero AI card refined as the primary product interaction.",
+    "Hero prompt buttons now carry an optional question into ai.html.",
+    "AI workspace auto-runs a homepage-selected question after loading constituency context.",
+    "Secondary AI workflow section and compact floating AI launcher added.",
+    "Poppins + Noto Sans Devanagari used for readability without changing the established colour identity."
+  ]
+}

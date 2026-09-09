@@ -1,0 +1,122 @@
+{
+  "dataset": "VANDIRA UP Politics Source Registry",
+  "updated_at": "2026-09-08",
+  "sources": [
+    {
+      "id": "eci",
+      "name": "Election Commission of India",
+      "type": "primary",
+      "topics": [
+        "elections",
+        "results",
+        "Form 20",
+        "house terms"
+      ],
+      "url": "https://www.eci.gov.in/"
+    },
+    {
+      "id": "up-gov",
+      "name": "Government of Uttar Pradesh — Information & Public Relations Department",
+      "type": "primary",
+      "topics": [
+        "government",
+        "cabinet",
+        "CM activity",
+        "official releases"
+      ],
+      "url": "https://information.up.gov.in/en/"
+    },
+    {
+      "id": "up-assembly",
+      "name": "Uttar Pradesh Legislative Assembly",
+      "type": "primary",
+      "topics": [
+        "assembly",
+        "ministers",
+        "legislative information"
+      ],
+      "url": "https://www.upvidhansabhaproceedings.gov.in/cabinet-ministers"
+    },
+    {
+      "id": "wiki-up",
+      "name": "Wikipedia — Uttar Pradesh",
+      "type": "secondary",
+      "topics": [
+        "history",
+        "politics",
+        "background"
+      ],
+      "url": "https://en.wikipedia.org/wiki/Uttar_Pradesh"
+    },
+    {
+      "id": "wiki-election-history",
+      "name": "Wikipedia — Elections in Uttar Pradesh",
+      "type": "secondary",
+      "topics": [
+        "election history",
+        "assembly elections"
+      ],
+      "url": "https://en.wikipedia.org/wiki/Elections_in_Uttar_Pradesh"
+    },
+    {
+      "id": "wiki-cm-history",
+      "name": "Wikipedia — Chief Minister of Uttar Pradesh",
+      "type": "secondary",
+      "topics": [
+        "chief ministers",
+        "political history"
+      ],
+      "url": "https://en.wikipedia.org/wiki/Chief_Minister_of_Uttar_Pradesh"
+    },
+    {
+      "id": "indian-express",
+      "name": "The Indian Express — Political Pulse",
+      "type": "news",
+      "topics": [
+        "current politics",
+        "2027 election",
+        "party strategy"
+      ],
+      "url": "https://indianexpress.com/section/political-pulse/"
+    },
+    {
+      "id": "indian-express-rss",
+      "name": "The Indian Express — Political Pulse RSS",
+      "type": "live-feed",
+      "topics": [
+        "live current politics",
+        "2027 election",
+        "party strategy"
+      ],
+      "url": "https://indianexpress.com/section/political-pulse/feed/"
+    },
+    {
+      "id": "moneycontrol",
+      "name": "Moneycontrol — Politics",
+      "type": "news",
+      "topics": [
+        "current politics",
+        "political developments"
+      ],
+      "url": "https://www.moneycontrol.com/news/india/"
+    },
+    {
+      "id": "new-indian-express",
+      "name": "The New Indian Express — Uttar Pradesh",
+      "type": "news",
+      "topics": [
+        "state politics",
+        "organisation",
+        "government"
+      ],
+      "url": "https://www.newindianexpress.com/states/uttar-pradesh/"
+    }
+  ],
+  "source_policy": [
+    "Primary sources are preferred for official facts, election results, house terms and government decisions.",
+    "Wikipedia is treated as a secondary reference and cross-check, not as the sole authority for election results.",
+    "News items are labelled reported and retain publication/source metadata.",
+    "Unverified social-media claims are not promoted to verified facts without corroboration.",
+    "Where an official/public RSS or structured feed is available, the dashboard may use a server-side connector; otherwise the latest source-backed snapshot is used."
+  ]
+}

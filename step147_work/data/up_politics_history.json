@@ -1,0 +1,19 @@
+{
+  "dataset": "VANDIRA Uttar Pradesh Political History Reference",
+  "updated_at": "2026-09-08",
+  "sources": [
+    {"name":"Election Commission of India — Statistical Reports","url":"https://www.eci.gov.in/statistical-reports","authority":"primary"},
+    {"name":"Wikipedia — History of the Uttar Pradesh Legislative Assembly","url":"https://en.wikipedia.org/wiki/History_of_the_Uttar_Pradesh_Legislative_Assembly","authority":"secondary"},
+    {"name":"Wikipedia — Elections in Uttar Pradesh","url":"https://en.wikipedia.org/wiki/Elections_in_Uttar_Pradesh","authority":"secondary"},
+    {"name":"Wikipedia — History of Uttar Pradesh","url":"https://en.wikipedia.org/wiki/History_of_Uttar_Pradesh","authority":"secondary"}
+  ],
+  "election_timeline": [
+    {"year":1951,"type":"Assembly","note":"First post-independence Uttar Pradesh Assembly election listed in ECI statistical reports."},
+    {"year":1957,"type":"Assembly"},{"year":1962,"type":"Assembly"},{"year":1967,"type":"Assembly"},{"year":1969,"type":"Assembly"},{"year":1974,"type":"Assembly"},{"year":1977,"type":"Assembly"},{"year":1980,"type":"Assembly"},{"year":1985,"type":"Assembly"},{"year":1989,"type":"Assembly"},{"year":1991,"type":"Assembly"},{"year":1993,"type":"Assembly"},{"year":1996,"type":"Assembly"},{"year":2002,"type":"Assembly"},{"year":2007,"type":"Assembly"},{"year":2012,"type":"Assembly"},{"year":2017,"type":"Assembly"},{"year":2022,"type":"Assembly"}
+  ],
+  "context": [
+    "The state was renamed Uttar Pradesh from United Provinces in 1950.",
+    "The Uttar Pradesh Legislative Assembly has 403 elected seats in the current house.",
+    "Uttar Pradesh has been a major centre of national politics and has produced multiple Prime Ministers of India."
+  ]
+}
