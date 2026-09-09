@@ -8,7 +8,7 @@ export async function onRequestGet({request}){
   if(u.searchParams.get('summary')==='1') return json({step:'STEP94',coverage:g.coverage,node_types:g.node_types,edge_types:g.edge_types});
   let matches=g.nodes.filter(n=>(!type||n.type===type)&&(!ac||Number(n.properties?.ac_no)===ac)&&(!q||`${n.label} ${JSON.stringify(n.properties)}`.toLowerCase().includes(q)));
   if(!matches.length) return json({step:'STEP94',count:0,results:[],query:q||null});
-  const ids=new Set(matches.map(n=>n.id)), frontier=new Set(ids), seen=new Set(ids);
+  let ids=new Set(matches.map(n=>n.id)), frontier=new Set(ids), seen=new Set(ids);
   const edges=g.edges;
   for(let d=0;d<depth;d++){
    const next=new Set(); for(const e of edges){if(frontier.has(e.source)){next.add(e.target)} if(frontier.has(e.target)){next.add(e.source)}}
