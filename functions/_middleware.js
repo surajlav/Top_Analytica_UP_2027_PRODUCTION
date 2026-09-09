@@ -10,7 +10,7 @@ export async function onRequest(context){
   headers['X-Request-ID']=requestId;
 
   const finish=(response)=>{
-    const out=new Response(response.body,response);
+    const out=new Response(response.body,{status:response.status,statusText:response.statusText,headers:new Headers(response.headers)});
     const duration=Date.now()-started;
     const event=runtimeEvent({request_id:requestId,method,route:new URL(request.url).pathname,status:out.status,duration_ms:duration});
     const finalHeaders=securityHeaders(request,env);
