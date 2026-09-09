@@ -1,1 +1,0 @@
-{'js_total': 74, 'js_fail': 0, 'json_total': 90, 'json_fail': 0, 'canonical_hashes': [('assembly_canonical_master.json', '195a68687e31981982f32850219907a929ac39d2dbf0a6649a6cf55884bc2944'), ('assembly_2022_master.json', '195a68687e31981982f32850219907a929ac39d2dbf0a6649a6cf55884bc2944')]}
